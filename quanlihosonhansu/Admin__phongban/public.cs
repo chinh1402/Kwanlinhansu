@@ -118,7 +118,9 @@ namespace quanlihosonhansu.Admin__phongban
                     }
                 }
                 // sử dụng phương thức SaveAs() để lưu workbook với filename
-                workbook.SaveAs(fileName);
+                string fullPath = Path.Combine(Application.StartupPath, fileName);
+
+                workbook.SaveAs(fullPath);
                 //đóng workbook
                 //workbook.Close();
                 //excel.Quit();

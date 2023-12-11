@@ -10,6 +10,9 @@
     <Compile Update="Admin__duan\frmQLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Admin__hosonhansu\addNhanSuVaoDuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Admin__hosonhansu\hosonhansu.cs">
       <SubType>Form</SubType>
     </Compile>
