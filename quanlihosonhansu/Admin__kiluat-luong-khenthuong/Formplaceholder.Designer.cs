@@ -1,6 +1,6 @@
-﻿namespace quanlihosonhansu.Admin__duan
+﻿namespace quanlihosonhansu.Admin__kiluat_luong_khenthuong
 {
-    partial class duan
+    partial class Formplaceholder
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "duan";
+            this.Text = "Formplaceholder";
         }
 
         #endregion

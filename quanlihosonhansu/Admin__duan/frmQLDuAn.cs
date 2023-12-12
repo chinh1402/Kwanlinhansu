@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using quanlihosonhansu.Connection;
-using static System.Net.Mime.MediaTypeNames;
+/*using static System.Net.Mime.MediaTypeNames;*/
+using System.Diagnostics;
 
 namespace quanlihosonhansu
 {
@@ -24,7 +24,11 @@ namespace quanlihosonhansu
 
         private void frmQLDuAn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         DataTable loadData(string sql)
@@ -189,7 +193,7 @@ namespace quanlihosonhansu
 
         private void btnTroLai_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)

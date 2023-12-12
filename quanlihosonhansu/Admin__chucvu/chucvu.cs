@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace quanlihosonhansu.Admin__duan
+namespace quanlihosonhansu.Admin__chucvu
 {
-    public partial class duan : Form
+    public partial class chucvu : Form
     {
-        public duan()
+        public chucvu()
         {
             InitializeComponent();
         }
