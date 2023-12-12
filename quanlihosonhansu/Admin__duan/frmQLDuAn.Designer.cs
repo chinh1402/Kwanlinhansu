@@ -50,11 +50,14 @@
             // 
             // btnTroLai
             // 
+            btnTroLai.Image = Properties.Resources.backPic;
+            btnTroLai.ImageAlign = ContentAlignment.MiddleLeft;
             btnTroLai.Location = new Point(12, 12);
             btnTroLai.Name = "btnTroLai";
-            btnTroLai.Size = new Size(94, 29);
+            btnTroLai.Size = new Size(98, 45);
             btnTroLai.TabIndex = 0;
             btnTroLai.Text = "Trở lại ";
+            btnTroLai.TextAlign = ContentAlignment.MiddleRight;
             btnTroLai.UseVisualStyleBackColor = true;
             btnTroLai.Click += btnTroLai_Click;
             // 
@@ -71,7 +74,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(123, 104);
+            label2.Location = new Point(134, 102);
             label2.Name = "label2";
             label2.Size = new Size(55, 20);
             label2.TabIndex = 2;
@@ -80,7 +83,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(121, 155);
+            label3.Location = new Point(132, 153);
             label3.Name = "label3";
             label3.Size = new Size(57, 20);
             label3.TabIndex = 3;
@@ -89,7 +92,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(435, 155);
+            label4.Location = new Point(456, 153);
             label4.Name = "label4";
             label4.Size = new Size(54, 20);
             label4.TabIndex = 4;
@@ -98,7 +101,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(435, 104);
+            label5.Location = new Point(456, 102);
             label5.Name = "label5";
             label5.Size = new Size(48, 20);
             label5.TabIndex = 5;
@@ -106,7 +109,7 @@
             // 
             // txtMaDA
             // 
-            txtMaDA.Location = new Point(200, 101);
+            txtMaDA.Location = new Point(211, 99);
             txtMaDA.Name = "txtMaDA";
             txtMaDA.ReadOnly = true;
             txtMaDA.Size = new Size(199, 27);
@@ -114,28 +117,28 @@
             // 
             // txtTenDA
             // 
-            txtTenDA.Location = new Point(200, 152);
+            txtTenDA.Location = new Point(211, 150);
             txtTenDA.Name = "txtTenDA";
             txtTenDA.Size = new Size(199, 27);
             txtTenDA.TabIndex = 7;
             // 
             // txtMoTa
             // 
-            txtMoTa.Location = new Point(546, 101);
+            txtMoTa.Location = new Point(517, 99);
             txtMoTa.Name = "txtMoTa";
             txtMoTa.Size = new Size(199, 27);
             txtMoTa.TabIndex = 8;
             // 
             // txtKhachHangID
             // 
-            txtKhachHangID.Location = new Point(546, 152);
+            txtKhachHangID.Location = new Point(517, 150);
             txtKhachHangID.Name = "txtKhachHangID";
             txtKhachHangID.Size = new Size(199, 27);
             txtKhachHangID.TabIndex = 9;
             // 
             // txtTimKiem
             // 
-            txtTimKiem.Location = new Point(200, 199);
+            txtTimKiem.Location = new Point(167, 200);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(170, 27);
             txtTimKiem.TabIndex = 11;
@@ -143,31 +146,40 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(480, 198);
+            btnThem.Image = Properties.Resources.addPic;
+            btnThem.ImageAlign = ContentAlignment.MiddleRight;
+            btnThem.Location = new Point(456, 191);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(76, 29);
+            btnThem.Size = new Size(98, 45);
             btnThem.TabIndex = 12;
             btnThem.Text = "Thêm";
+            btnThem.TextAlign = ContentAlignment.MiddleLeft;
             btnThem.UseVisualStyleBackColor = true;
             btnThem.Click += btnThem_Click;
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(574, 198);
+            btnSua.Image = Properties.Resources.updatePic;
+            btnSua.ImageAlign = ContentAlignment.MiddleRight;
+            btnSua.Location = new Point(560, 192);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(76, 29);
+            btnSua.Size = new Size(98, 45);
             btnSua.TabIndex = 13;
             btnSua.Text = "Sửa";
+            btnSua.TextAlign = ContentAlignment.MiddleLeft;
             btnSua.UseVisualStyleBackColor = true;
             btnSua.Click += btnSua_Click;
             // 
             // btnXoa
             // 
-            btnXoa.Location = new Point(668, 198);
+            btnXoa.Image = Properties.Resources.deletePic;
+            btnXoa.ImageAlign = ContentAlignment.MiddleRight;
+            btnXoa.Location = new Point(664, 192);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(76, 29);
+            btnXoa.Size = new Size(98, 45);
             btnXoa.TabIndex = 14;
             btnXoa.Text = "Xóa";
+            btnXoa.TextAlign = ContentAlignment.MiddleLeft;
             btnXoa.UseVisualStyleBackColor = true;
             btnXoa.Click += btnXoa_Click;
             // 
@@ -186,9 +198,9 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(387, 199);
+            btnNhap.Location = new Point(352, 191);
             btnNhap.Name = "btnNhap";
-            btnNhap.Size = new Size(76, 29);
+            btnNhap.Size = new Size(98, 45);
             btnNhap.TabIndex = 16;
             btnNhap.Text = "Nhập";
             btnNhap.UseVisualStyleBackColor = true;
@@ -197,7 +209,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(121, 203);
+            label6.Location = new Point(88, 204);
             label6.Name = "label6";
             label6.Size = new Size(70, 20);
             label6.TabIndex = 17;
