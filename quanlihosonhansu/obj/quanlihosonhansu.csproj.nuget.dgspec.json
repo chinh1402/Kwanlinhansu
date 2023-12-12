@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\utt\\Tai_lieu\\Mon_hoc\\CNPM\\QLNhanSu\\Kwanlinhansu\\quanlihosonhansu\\quanlihosonhansu.csproj": {}
+    "C:\\Users\\ndchi\\source\\repos\\quanlihosonhansu\\quanlihosonhansu\\quanlihosonhansu.csproj": {}
   },
   "projects": {
-    "D:\\utt\\Tai_lieu\\Mon_hoc\\CNPM\\QLNhanSu\\Kwanlinhansu\\quanlihosonhansu\\quanlihosonhansu.csproj": {
+    "C:\\Users\\ndchi\\source\\repos\\quanlihosonhansu\\quanlihosonhansu\\quanlihosonhansu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\utt\\Tai_lieu\\Mon_hoc\\CNPM\\QLNhanSu\\Kwanlinhansu\\quanlihosonhansu\\quanlihosonhansu.csproj",
+        "projectUniqueName": "C:\\Users\\ndchi\\source\\repos\\quanlihosonhansu\\quanlihosonhansu\\quanlihosonhansu.csproj",
         "projectName": "quanlihosonhansu",
-        "projectPath": "D:\\utt\\Tai_lieu\\Mon_hoc\\CNPM\\QLNhanSu\\Kwanlinhansu\\quanlihosonhansu\\quanlihosonhansu.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\utt\\Tai_lieu\\Mon_hoc\\CNPM\\QLNhanSu\\Kwanlinhansu\\quanlihosonhansu\\obj\\",
+        "projectPath": "C:\\Users\\ndchi\\source\\repos\\quanlihosonhansu\\quanlihosonhansu\\quanlihosonhansu.csproj",
+        "packagesPath": "C:\\Users\\ndchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ndchi\\source\\repos\\quanlihosonhansu\\quanlihosonhansu\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ndchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,10 +40,6 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "Microsoft.Office.Interop.Excel": {
-              "target": "Package",
-              "version": "[15.0.4795.1001, )"
-            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
@@ -68,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

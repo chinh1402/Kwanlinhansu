@@ -83,6 +83,9 @@ namespace quanlihosonhansu.Authentication
                         {
                             // Đăng nhập thành công cho admin
                             MessageBox.Show("Đăng nhập thành công! Chào mừng Admin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            AdminMain frmAdmin = new AdminMain();
+                            this.Hide();
+                            frmAdmin.Show();
                         }
                         else
                         {

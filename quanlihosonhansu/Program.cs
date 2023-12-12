@@ -2,6 +2,7 @@ using quanlihosonhansu.User__things;
 using quanlihosonhansu.Admin__phongban;
 using quanlihosonhansu.Authentication;
 using quanlihosonhansu.Admin__hosonhansu;
+using quanlihosonhansu.Admin__chucvu;
 
 namespace quanlihosonhansu
 {
@@ -16,7 +17,7 @@ namespace quanlihosonhansu
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmQLDuAn());
+            Application.Run(new dangnhap());
         }
     }
 }
