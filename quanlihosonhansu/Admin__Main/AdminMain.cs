@@ -98,7 +98,7 @@ namespace quanlihosonhansu
 
         private void luong_Click(object sender, EventArgs e)
         {
-            Formplaceholder lg = new Formplaceholder();
+            frmLuong lg = new frmLuong();
             lg.MdiParent = this;
             lg.Show();
         }
