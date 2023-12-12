@@ -95,7 +95,6 @@ D:\Clone\quanlihosonhansu\obj\Debug\net6.0-windows\ref\quanlihosonhansu.dll
 C:\Users\ndchi\source\repos\quanlihosonhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.Properties.Resources.resources
 C:\Users\ndchi\source\repos\quanlihosonhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.User__things.DoiMatKhau.resources
 C:\Users\ndchi\source\repos\quanlihosonhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.Admin__chucvu.chucvu.resources
-C:\Users\ndchi\source\repos\quanlihosonhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.Admin__kiluat_luong_khenthuong.Formplaceholder.resources
 C:\Users\ndchi\source\repos\quanlihosonhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.Admin__hosonhansu.addNhanSuVaoDuAn.resources
 C:\Users\ndchi\source\repos\quanlihosonhansu\quanlihosonhansu\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
 C:\Users\ndchi\source\repos\quanlihosonhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.csproj.ResolveComReference.cache
@@ -141,3 +140,4 @@ D:\utt\Tai_lieu\Mon_hoc\CNPM\QLNhanSu\Kwanlinhansu\quanlihosonhansu\obj\Debug\ne
 D:\utt\Tai_lieu\Mon_hoc\CNPM\QLNhanSu\Kwanlinhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.Admin__kiluat_luong_khenthuong.Formplaceholder.resources
 D:\utt\Tai_lieu\Mon_hoc\CNPM\QLNhanSu\Kwanlinhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.Properties.Resources.resources
 D:\utt\Tai_lieu\Mon_hoc\CNPM\QLNhanSu\Kwanlinhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.User__things.DoiMatKhau.resources
+C:\Users\ndchi\source\repos\quanlihosonhansu\quanlihosonhansu\obj\Debug\net6.0-windows\quanlihosonhansu.Admin__kiluat_luong_khenthuong.frmLuong.resources
