@@ -19,6 +19,9 @@
     <Compile Update="Admin__kiluat-luong-khenthuong\Formplaceholder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Admin__Main\AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Admin__phongban\phongban.cs">
       <SubType>Form</SubType>
     </Compile>

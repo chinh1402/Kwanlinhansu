@@ -61,7 +61,9 @@ namespace quanlihosonhansu.Admin__hosonhansu
 
             // Default settings
             txtId.Enabled = false; // as always
+            comboStatus.Enabled = false;
             assignComboBoxes();
+
 
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dateTimeJoin.Enabled = false;
