@@ -419,6 +419,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Name = "hosonhansu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "hosonhansu";
             this.Load += new System.EventHandler(this.hosonhansu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -2,6 +2,7 @@ using quanlihosonhansu.User__things;
 using quanlihosonhansu.Admin__phongban;
 using quanlihosonhansu.Authentication;
 using quanlihosonhansu.Admin__hosonhansu;
+using quanlihosonhansu.Admin__chucvu;
 
 namespace quanlihosonhansu
 {

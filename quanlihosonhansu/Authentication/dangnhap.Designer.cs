@@ -45,7 +45,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(251, 23);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -55,7 +54,6 @@
             this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên đăng nhập";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox2
             // 
@@ -64,7 +62,6 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(253, 23);
             this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -74,13 +71,12 @@
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật khẩu";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(274, 122);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(94, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Đăng nhập";
             this.button1.UseVisualStyleBackColor = true;
@@ -98,7 +94,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -135,6 +130,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "dangnhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -186,6 +186,7 @@
             this.Controls.Add(this.dgvNhanVien);
             this.Controls.Add(this.dgvDuAn);
             this.Name = "addNhanSuVaoDuAn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addNhanSuVaoDuAn";
             this.Load += new System.EventHandler(this.addNhanSuVaoDuAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDuAn)).EndInit();
