@@ -153,6 +153,7 @@
             this.btnKiemTra.TabIndex = 58;
             this.btnKiemTra.Text = "Kiểm tra";
             this.btnKiemTra.UseVisualStyleBackColor = true;
+            this.btnKiemTra.Click += new System.EventHandler(this.btnKiemTra_Click);
             // 
             // dgvLuong
             // 
@@ -168,6 +169,7 @@
             this.dgvLuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLuong.Size = new System.Drawing.Size(642, 141);
             this.dgvLuong.TabIndex = 57;
+            this.dgvLuong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLuong_CellContentClick);
             // 
             // btnXoa
             // 
@@ -178,6 +180,7 @@
             this.btnXoa.TabIndex = 56;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -188,6 +191,7 @@
             this.btnSua.TabIndex = 55;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -198,6 +202,7 @@
             this.btnThem.TabIndex = 54;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtLuongThuong
             // 
@@ -276,6 +281,7 @@
             this.btnTroLai.TabIndex = 44;
             this.btnTroLai.Text = "Trở lại ";
             this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // label1
             // 
@@ -338,6 +344,7 @@
             this.Name = "frmLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLuong";
+            this.Load += new System.EventHandler(this.frmLuong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
