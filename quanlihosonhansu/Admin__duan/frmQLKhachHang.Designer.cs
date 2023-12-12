@@ -57,6 +57,7 @@
             this.btnNhap.TabIndex = 33;
             this.btnNhap.Text = "Nhập";
             this.btnNhap.UseVisualStyleBackColor = true;
+            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
             // 
             // dgvKH
             // 
@@ -70,6 +71,7 @@
             this.dgvKH.RowTemplate.Height = 29;
             this.dgvKH.Size = new System.Drawing.Size(642, 141);
             this.dgvKH.TabIndex = 32;
+            this.dgvKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKH_CellContentClick);
             // 
             // btnXoa
             // 
@@ -83,6 +85,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -96,6 +99,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -109,6 +113,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtTimKiem
             // 
@@ -117,6 +122,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(149, 23);
             this.txtTimKiem.TabIndex = 28;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // txtSDT
             // 
@@ -209,6 +215,7 @@
             this.btnTroLai.Text = "Trở lại ";
             this.btnTroLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // label6
             // 
