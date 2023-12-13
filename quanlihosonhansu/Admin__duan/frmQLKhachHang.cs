@@ -18,11 +18,6 @@ namespace quanlihosonhansu
         {
             InitializeComponent();
         }
-
-        private void frmQLKhachHang_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //this.Close();
-        }
         DataTable loadData(string sql)
         {
             var cmd = new SqlCommand(sql, conn);
@@ -199,7 +194,7 @@ namespace quanlihosonhansu
         }
         private void btnTroLai_Click(object sender, EventArgs e)
         {
-            //this.Close();
+            this.Close();
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
@@ -216,6 +211,11 @@ namespace quanlihosonhansu
                 dgvKH.DataSource = loadData(sql);
             }
             conn.Close();
+        }
+
+        private void frmQLKhachHang_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            /*this.Close();*/
         }
     }
 }
