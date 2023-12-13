@@ -22,14 +22,6 @@ namespace quanlihosonhansu
             InitializeComponent();
         }
 
-        private void frmQLDuAn_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-            }
-        }
-
         DataTable loadData(string sql)
         {
             var cmd = new SqlCommand(sql, conn);
@@ -206,7 +198,7 @@ namespace quanlihosonhansu
 
         private void btnTroLai_Click(object sender, EventArgs e)
         {
-            //this.Close();
+            this.Close();
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
@@ -223,6 +215,12 @@ namespace quanlihosonhansu
                 dgvDA.DataSource = loadData(sql);
             }
             conn.Close();
+        }
+
+        private void frmQLDuAn_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

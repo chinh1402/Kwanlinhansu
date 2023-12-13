@@ -28,755 +28,739 @@
         /// </summary>
         private void InitializeComponent()
         {
-            saveButton = new Button();
-            deleteButton = new Button();
-            functionFlowPanel = new FlowLayoutPanel();
-            resetButton = new Button();
-            thôngTinCáNhânToolStripMenuItem = new ToolStripMenuItem();
-            doiMatKhauStripMenuItem = new ToolStripMenuItem();
-            đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
-            stripMenu = new MenuStrip();
-            debugToolStripMenuItem = new ToolStripMenuItem();
-            lấyThôngTinNgườiĐầuTiênToolStripMenuItem = new ToolStripMenuItem();
-            iDNgườiĐăngNhậpToolStripMenuItem = new ToolStripMenuItem();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            panel1 = new Panel();
-            tongLuongThucNhanTable = new TableLayoutPanel();
-            tongLuongLabel = new Label();
-            tongLuongHienThiLabel = new Label();
-            chiTietLuongTable = new TableLayoutPanel();
-            quyLabel = new Label();
-            luongCoBanLabel = new Label();
-            heSoLuong = new Label();
-            luongThuongLabel = new Label();
-            luongPhatLabel = new Label();
-            hienThiLuongLabel = new Label();
-            hienThiHSLuongLabel = new Label();
-            hienThiLuongThuongLabel = new Label();
-            hienThiLuongPhatLabel = new Label();
-            projectDataGridView = new DataGridView();
-            thongTinTable = new TableLayoutPanel();
-            gioiTinhLabel = new Label();
-            phongBanLabel = new Label();
-            chucVuLabel = new Label();
-            diaChiLabel = new Label();
-            sdtLabel = new Label();
-            emailLabel = new Label();
-            hoTenTextBox = new TextBox();
-            ngaySinhLabel = new Label();
-            hoTenLabel = new Label();
-            ngaySinhTextBox = new TextBox();
-            emailTextBox = new TextBox();
-            soDienThoaiTextBox = new TextBox();
-            diaChiTextBox = new TextBox();
-            chucVuTextBox = new TextBox();
-            phongBanTextBox = new TextBox();
-            gioiTinhComboBox = new ComboBox();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            ngayThamGiaTextBox = new TextBox();
-            trangThaiTextBox = new TextBox();
-            ngayThamGiaLabel = new Label();
-            trangThaiLabel = new Label();
-            luongTable = new TableLayoutPanel();
-            functionFlowPanel.SuspendLayout();
-            stripMenu.SuspendLayout();
-            tongLuongThucNhanTable.SuspendLayout();
-            chiTietLuongTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)projectDataGridView).BeginInit();
-            thongTinTable.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
-            luongTable.SuspendLayout();
-            SuspendLayout();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.functionFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doiMatKhauStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripMenu = new System.Windows.Forms.MenuStrip();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iDNgườiĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tongLuongThucNhanTable = new System.Windows.Forms.TableLayoutPanel();
+            this.tongLuongLabel = new System.Windows.Forms.Label();
+            this.tongLuongHienThiLabel = new System.Windows.Forms.Label();
+            this.chiTietLuongTable = new System.Windows.Forms.TableLayoutPanel();
+            this.quyLabel = new System.Windows.Forms.Label();
+            this.luongCoBanLabel = new System.Windows.Forms.Label();
+            this.heSoLuong = new System.Windows.Forms.Label();
+            this.luongThuongLabel = new System.Windows.Forms.Label();
+            this.luongPhatLabel = new System.Windows.Forms.Label();
+            this.hienThiLuongLabel = new System.Windows.Forms.Label();
+            this.hienThiHSLuongLabel = new System.Windows.Forms.Label();
+            this.hienThiLuongThuongLabel = new System.Windows.Forms.Label();
+            this.hienThiLuongPhatLabel = new System.Windows.Forms.Label();
+            this.projectDataGridView = new System.Windows.Forms.DataGridView();
+            this.thongTinTable = new System.Windows.Forms.TableLayoutPanel();
+            this.gioiTinhLabel = new System.Windows.Forms.Label();
+            this.phongBanLabel = new System.Windows.Forms.Label();
+            this.chucVuLabel = new System.Windows.Forms.Label();
+            this.diaChiLabel = new System.Windows.Forms.Label();
+            this.sdtLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.hoTenTextBox = new System.Windows.Forms.TextBox();
+            this.ngaySinhLabel = new System.Windows.Forms.Label();
+            this.hoTenLabel = new System.Windows.Forms.Label();
+            this.ngaySinhTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.soDienThoaiTextBox = new System.Windows.Forms.TextBox();
+            this.diaChiTextBox = new System.Windows.Forms.TextBox();
+            this.chucVuTextBox = new System.Windows.Forms.TextBox();
+            this.phongBanTextBox = new System.Windows.Forms.TextBox();
+            this.gioiTinhComboBox = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.ngayThamGiaTextBox = new System.Windows.Forms.TextBox();
+            this.trangThaiTextBox = new System.Windows.Forms.TextBox();
+            this.ngayThamGiaLabel = new System.Windows.Forms.Label();
+            this.trangThaiLabel = new System.Windows.Forms.Label();
+            this.luongTable = new System.Windows.Forms.TableLayoutPanel();
+            this.functionFlowPanel.SuspendLayout();
+            this.stripMenu.SuspendLayout();
+            this.tongLuongThucNhanTable.SuspendLayout();
+            this.chiTietLuongTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDataGridView)).BeginInit();
+            this.thongTinTable.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.luongTable.SuspendLayout();
+            this.SuspendLayout();
             // 
             // saveButton
             // 
-            saveButton.BackColor = Color.Transparent;
-            saveButton.Enabled = false;
-            saveButton.FlatStyle = FlatStyle.Popup;
-            saveButton.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            saveButton.Image = Properties.Resources.saveIcon;
-            saveButton.Location = new Point(6, 7);
-            saveButton.Margin = new Padding(6, 7, 6, 7);
-            saveButton.Name = "saveButton";
-            saveButton.Size = new Size(145, 52);
-            saveButton.TabIndex = 1;
-            saveButton.Text = "Lưu thay đổi";
-            saveButton.TextImageRelation = TextImageRelation.ImageBeforeText;
-            saveButton.UseVisualStyleBackColor = false;
-            saveButton.Click += saveButton_Click;
+            this.saveButton.BackColor = System.Drawing.Color.Transparent;
+            this.saveButton.Enabled = false;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.saveButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.saveButton.Image = global::quanlihosonhansu.Properties.Resources.saveIcon;
+            this.saveButton.Location = new System.Drawing.Point(5, 5);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(5);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(127, 39);
+            this.saveButton.TabIndex = 1;
+            this.saveButton.Text = "Lưu thay đổi";
+            this.saveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // deleteButton
             // 
-            deleteButton.Anchor = AnchorStyles.Left;
-            deleteButton.BackColor = Color.Transparent;
-            deleteButton.FlatStyle = FlatStyle.Popup;
-            deleteButton.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            deleteButton.Image = Properties.Resources.eraserIcon;
-            deleteButton.Location = new Point(160, 7);
-            deleteButton.Margin = new Padding(3, 4, 3, 4);
-            deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(145, 52);
-            deleteButton.TabIndex = 2;
-            deleteButton.Text = "Xóa tất cả";
-            deleteButton.TextImageRelation = TextImageRelation.ImageBeforeText;
-            deleteButton.UseVisualStyleBackColor = false;
-            deleteButton.Click += deleteButton_Click;
+            this.deleteButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.deleteButton.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deleteButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.deleteButton.Image = global::quanlihosonhansu.Properties.Resources.eraserIcon;
+            this.deleteButton.Location = new System.Drawing.Point(140, 5);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(127, 39);
+            this.deleteButton.TabIndex = 2;
+            this.deleteButton.Text = "Xóa tất cả";
+            this.deleteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // functionFlowPanel
             // 
-            functionFlowPanel.AutoSize = true;
-            functionFlowPanel.Controls.Add(saveButton);
-            functionFlowPanel.Controls.Add(deleteButton);
-            functionFlowPanel.Controls.Add(resetButton);
-            functionFlowPanel.Dock = DockStyle.Top;
-            functionFlowPanel.Location = new Point(17, 28);
-            functionFlowPanel.Margin = new Padding(6, 7, 6, 7);
-            functionFlowPanel.Name = "functionFlowPanel";
-            functionFlowPanel.Size = new Size(1161, 66);
-            functionFlowPanel.TabIndex = 4;
+            this.functionFlowPanel.AutoSize = true;
+            this.functionFlowPanel.Controls.Add(this.saveButton);
+            this.functionFlowPanel.Controls.Add(this.deleteButton);
+            this.functionFlowPanel.Controls.Add(this.resetButton);
+            this.functionFlowPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.functionFlowPanel.Location = new System.Drawing.Point(15, 24);
+            this.functionFlowPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.functionFlowPanel.Name = "functionFlowPanel";
+            this.functionFlowPanel.Size = new System.Drawing.Size(1016, 49);
+            this.functionFlowPanel.TabIndex = 4;
             // 
             // resetButton
             // 
-            resetButton.Anchor = AnchorStyles.Left;
-            resetButton.BackColor = Color.Transparent;
-            resetButton.Enabled = false;
-            resetButton.FlatStyle = FlatStyle.Popup;
-            resetButton.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            resetButton.Image = Properties.Resources.resetICon;
-            resetButton.Location = new Point(311, 7);
-            resetButton.Margin = new Padding(3, 4, 3, 4);
-            resetButton.Name = "resetButton";
-            resetButton.Size = new Size(151, 52);
-            resetButton.TabIndex = 5;
-            resetButton.Text = "Đặt lại thay đổi";
-            resetButton.TextImageRelation = TextImageRelation.ImageBeforeText;
-            resetButton.UseVisualStyleBackColor = false;
-            resetButton.Click += resetButton_Click;
+            this.resetButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.resetButton.BackColor = System.Drawing.Color.Transparent;
+            this.resetButton.Enabled = false;
+            this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.resetButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.resetButton.Image = global::quanlihosonhansu.Properties.Resources.resetICon;
+            this.resetButton.Location = new System.Drawing.Point(273, 5);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(132, 39);
+            this.resetButton.TabIndex = 5;
+            this.resetButton.Text = "Đặt lại thay đổi";
+            this.resetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
-            thôngTinCáNhânToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { doiMatKhauStripMenuItem, đăngXuấtToolStripMenuItem });
-            thôngTinCáNhânToolStripMenuItem.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            thôngTinCáNhânToolStripMenuItem.Padding = new Padding(0, 0, 4, 0);
-            thôngTinCáNhânToolStripMenuItem.Size = new Size(78, 22);
-            thôngTinCáNhânToolStripMenuItem.Text = "Thông tin";
+            this.thôngTinCáNhânToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.doiMatKhauStripMenuItem,
+            this.đăngXuấtToolStripMenuItem});
+            this.thôngTinCáNhânToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
+            this.thôngTinCáNhânToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin";
             // 
             // doiMatKhauStripMenuItem
             // 
-            doiMatKhauStripMenuItem.Name = "doiMatKhauStripMenuItem";
-            doiMatKhauStripMenuItem.Size = new Size(177, 26);
-            doiMatKhauStripMenuItem.Text = "Đổi mật khẩu";
-            doiMatKhauStripMenuItem.Click += doiMatKhauStripMenuItem_Click;
+            this.doiMatKhauStripMenuItem.Name = "doiMatKhauStripMenuItem";
+            this.doiMatKhauStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.doiMatKhauStripMenuItem.Text = "Đổi mật khẩu";
+            this.doiMatKhauStripMenuItem.Click += new System.EventHandler(this.doiMatKhauStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
-            đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            đăngXuấtToolStripMenuItem.Size = new Size(177, 26);
-            đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            đăngXuấtToolStripMenuItem.Click += đăngXuấtToolStripMenuItem_Click;
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // stripMenu
             // 
-            stripMenu.ImageScalingSize = new Size(20, 20);
-            stripMenu.Items.AddRange(new ToolStripItem[] { thôngTinCáNhânToolStripMenuItem, debugToolStripMenuItem });
-            stripMenu.Location = new Point(17, 0);
-            stripMenu.Name = "stripMenu";
-            stripMenu.Padding = new Padding(0, 3, 0, 3);
-            stripMenu.Size = new Size(1161, 28);
-            stripMenu.TabIndex = 3;
-            stripMenu.Text = "menuStrip1";
+            this.stripMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.stripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thôngTinCáNhânToolStripMenuItem,
+            this.debugToolStripMenuItem});
+            this.stripMenu.Location = new System.Drawing.Point(15, 0);
+            this.stripMenu.Name = "stripMenu";
+            this.stripMenu.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.stripMenu.Size = new System.Drawing.Size(1016, 24);
+            this.stripMenu.TabIndex = 3;
+            this.stripMenu.Text = "menuStrip1";
             // 
             // debugToolStripMenuItem
             // 
-            debugToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lấyThôngTinNgườiĐầuTiênToolStripMenuItem, iDNgườiĐăngNhậpToolStripMenuItem });
-            debugToolStripMenuItem.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            debugToolStripMenuItem.Size = new Size(64, 22);
-            debugToolStripMenuItem.Text = "Debug";
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem,
+            this.iDNgườiĐăngNhậpToolStripMenuItem});
+            this.debugToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.debugToolStripMenuItem.Text = "Debug";
             // 
             // lấyThôngTinNgườiĐầuTiênToolStripMenuItem
             // 
-            lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Name = "lấyThôngTinNgườiĐầuTiênToolStripMenuItem";
-            lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Size = new Size(273, 26);
-            lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Text = "Lấy thông tin người đầu tiên";
-            lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Click += lấyThôngTinNgườiĐầuTiênToolStripMenuItem_Click;
+            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Name = "lấyThôngTinNgườiĐầuTiênToolStripMenuItem";
+            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Text = "Lấy thông tin người đầu tiên";
+            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Click += new System.EventHandler(this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem_Click);
             // 
             // iDNgườiĐăngNhậpToolStripMenuItem
             // 
-            iDNgườiĐăngNhậpToolStripMenuItem.Name = "iDNgườiĐăngNhậpToolStripMenuItem";
-            iDNgườiĐăngNhậpToolStripMenuItem.Size = new Size(273, 26);
-            iDNgườiĐăngNhậpToolStripMenuItem.Text = "ID người đăng nhập";
-            iDNgườiĐăngNhậpToolStripMenuItem.Click += iDNgườiĐăngNhậpToolStripMenuItem_Click;
+            this.iDNgườiĐăngNhậpToolStripMenuItem.Name = "iDNgườiĐăngNhậpToolStripMenuItem";
+            this.iDNgườiĐăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.iDNgườiĐăngNhậpToolStripMenuItem.Text = "ID người đăng nhập";
+            this.iDNgườiĐăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.iDNgườiĐăngNhậpToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 19.880352F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.70655F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.70655F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.70655F));
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.Size = new Size(200, 100);
-            tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.88035F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.70655F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.70655F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.70655F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Black;
-            panel1.Dock = DockStyle.Fill;
-            panel1.ForeColor = SystemColors.ControlText;
-            panel1.Location = new Point(580, 4);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            luongTable.SetRowSpan(panel1, 2);
-            panel1.Size = new Size(1, 443);
-            panel1.TabIndex = 11;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(508, 3);
+            this.panel1.Name = "panel1";
+            this.luongTable.SetRowSpan(this.panel1, 2);
+            this.panel1.Size = new System.Drawing.Size(1, 332);
+            this.panel1.TabIndex = 11;
             // 
             // tongLuongThucNhanTable
             // 
-            tongLuongThucNhanTable.BackColor = Color.Transparent;
-            tongLuongThucNhanTable.ColumnCount = 3;
-            tongLuongThucNhanTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 61.50235F));
-            tongLuongThucNhanTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38.49765F));
-            tongLuongThucNhanTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 39F));
-            tongLuongThucNhanTable.Controls.Add(tongLuongLabel, 0, 0);
-            tongLuongThucNhanTable.Controls.Add(tongLuongHienThiLabel, 1, 0);
-            tongLuongThucNhanTable.Location = new Point(3, 399);
-            tongLuongThucNhanTable.Margin = new Padding(3, 4, 3, 4);
-            tongLuongThucNhanTable.Name = "tongLuongThucNhanTable";
-            tongLuongThucNhanTable.RowCount = 1;
-            tongLuongThucNhanTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tongLuongThucNhanTable.Size = new Size(570, 48);
-            tongLuongThucNhanTable.TabIndex = 10;
+            this.tongLuongThucNhanTable.BackColor = System.Drawing.Color.Transparent;
+            this.tongLuongThucNhanTable.ColumnCount = 3;
+            this.tongLuongThucNhanTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.50235F));
+            this.tongLuongThucNhanTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.49765F));
+            this.tongLuongThucNhanTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tongLuongThucNhanTable.Controls.Add(this.tongLuongLabel, 0, 0);
+            this.tongLuongThucNhanTable.Controls.Add(this.tongLuongHienThiLabel, 1, 0);
+            this.tongLuongThucNhanTable.Location = new System.Drawing.Point(3, 299);
+            this.tongLuongThucNhanTable.Name = "tongLuongThucNhanTable";
+            this.tongLuongThucNhanTable.RowCount = 1;
+            this.tongLuongThucNhanTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tongLuongThucNhanTable.Size = new System.Drawing.Size(499, 36);
+            this.tongLuongThucNhanTable.TabIndex = 10;
             // 
             // tongLuongLabel
             // 
-            tongLuongLabel.AutoSize = true;
-            tongLuongLabel.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            tongLuongLabel.Location = new Point(3, 0);
-            tongLuongLabel.Name = "tongLuongLabel";
-            tongLuongLabel.Size = new Size(293, 29);
-            tongLuongLabel.TabIndex = 0;
-            tongLuongLabel.Text = "Tổng Lương Thực Nhận";
+            this.tongLuongLabel.AutoSize = true;
+            this.tongLuongLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tongLuongLabel.Location = new System.Drawing.Point(3, 0);
+            this.tongLuongLabel.Name = "tongLuongLabel";
+            this.tongLuongLabel.Size = new System.Drawing.Size(233, 23);
+            this.tongLuongLabel.TabIndex = 0;
+            this.tongLuongLabel.Text = "Tổng Lương Thực Nhận";
             // 
             // tongLuongHienThiLabel
             // 
-            tongLuongHienThiLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            tongLuongHienThiLabel.AutoSize = true;
-            tongLuongHienThiLabel.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            tongLuongHienThiLabel.Location = new Point(442, 0);
-            tongLuongHienThiLabel.Name = "tongLuongHienThiLabel";
-            tongLuongHienThiLabel.Size = new Size(85, 29);
-            tongLuongHienThiLabel.TabIndex = 1;
-            tongLuongHienThiLabel.Text = "label1";
+            this.tongLuongHienThiLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tongLuongHienThiLabel.AutoSize = true;
+            this.tongLuongHienThiLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tongLuongHienThiLabel.Location = new System.Drawing.Point(392, 0);
+            this.tongLuongHienThiLabel.Name = "tongLuongHienThiLabel";
+            this.tongLuongHienThiLabel.Size = new System.Drawing.Size(68, 23);
+            this.tongLuongHienThiLabel.TabIndex = 1;
+            this.tongLuongHienThiLabel.Text = "label1";
             // 
             // chiTietLuongTable
             // 
-            chiTietLuongTable.Anchor = AnchorStyles.Left;
-            chiTietLuongTable.BackColor = Color.Transparent;
-            chiTietLuongTable.ColumnCount = 3;
-            chiTietLuongTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            chiTietLuongTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60.12024F));
-            chiTietLuongTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 6.61322641F));
-            chiTietLuongTable.Controls.Add(quyLabel, 0, 0);
-            chiTietLuongTable.Controls.Add(luongCoBanLabel, 0, 1);
-            chiTietLuongTable.Controls.Add(heSoLuong, 0, 2);
-            chiTietLuongTable.Controls.Add(luongThuongLabel, 0, 3);
-            chiTietLuongTable.Controls.Add(luongPhatLabel, 0, 4);
-            chiTietLuongTable.Controls.Add(hienThiLuongLabel, 1, 1);
-            chiTietLuongTable.Controls.Add(hienThiHSLuongLabel, 1, 2);
-            chiTietLuongTable.Controls.Add(hienThiLuongThuongLabel, 1, 3);
-            chiTietLuongTable.Controls.Add(hienThiLuongPhatLabel, 1, 4);
-            chiTietLuongTable.Location = new Point(3, 12);
-            chiTietLuongTable.Margin = new Padding(3, 4, 3, 4);
-            chiTietLuongTable.Name = "chiTietLuongTable";
-            chiTietLuongTable.RowCount = 5;
-            chiTietLuongTable.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            chiTietLuongTable.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            chiTietLuongTable.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            chiTietLuongTable.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            chiTietLuongTable.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            chiTietLuongTable.Size = new Size(570, 371);
-            chiTietLuongTable.TabIndex = 6;
+            this.chiTietLuongTable.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.chiTietLuongTable.BackColor = System.Drawing.Color.Transparent;
+            this.chiTietLuongTable.ColumnCount = 3;
+            this.chiTietLuongTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.chiTietLuongTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.12024F));
+            this.chiTietLuongTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.613226F));
+            this.chiTietLuongTable.Controls.Add(this.quyLabel, 0, 0);
+            this.chiTietLuongTable.Controls.Add(this.luongCoBanLabel, 0, 1);
+            this.chiTietLuongTable.Controls.Add(this.heSoLuong, 0, 2);
+            this.chiTietLuongTable.Controls.Add(this.luongThuongLabel, 0, 3);
+            this.chiTietLuongTable.Controls.Add(this.luongPhatLabel, 0, 4);
+            this.chiTietLuongTable.Controls.Add(this.hienThiLuongLabel, 1, 1);
+            this.chiTietLuongTable.Controls.Add(this.hienThiHSLuongLabel, 1, 2);
+            this.chiTietLuongTable.Controls.Add(this.hienThiLuongThuongLabel, 1, 3);
+            this.chiTietLuongTable.Controls.Add(this.hienThiLuongPhatLabel, 1, 4);
+            this.chiTietLuongTable.Location = new System.Drawing.Point(3, 9);
+            this.chiTietLuongTable.Name = "chiTietLuongTable";
+            this.chiTietLuongTable.RowCount = 5;
+            this.chiTietLuongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.chiTietLuongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.chiTietLuongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.chiTietLuongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.chiTietLuongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.chiTietLuongTable.Size = new System.Drawing.Size(499, 278);
+            this.chiTietLuongTable.TabIndex = 6;
             // 
             // quyLabel
             // 
-            quyLabel.AutoSize = true;
-            quyLabel.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            quyLabel.Location = new Point(3, 0);
-            quyLabel.Name = "quyLabel";
-            quyLabel.Padding = new Padding(0, 7, 0, 0);
-            quyLabel.Size = new Size(53, 31);
-            quyLabel.TabIndex = 0;
-            quyLabel.Text = "QUÝ";
+            this.quyLabel.AutoSize = true;
+            this.quyLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.quyLabel.Location = new System.Drawing.Point(3, 0);
+            this.quyLabel.Name = "quyLabel";
+            this.quyLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.quyLabel.Size = new System.Drawing.Size(44, 24);
+            this.quyLabel.TabIndex = 0;
+            this.quyLabel.Text = "QUÝ";
             // 
             // luongCoBanLabel
             // 
-            luongCoBanLabel.Anchor = AnchorStyles.Left;
-            luongCoBanLabel.AutoSize = true;
-            luongCoBanLabel.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            luongCoBanLabel.Location = new Point(3, 100);
-            luongCoBanLabel.Name = "luongCoBanLabel";
-            luongCoBanLabel.Size = new Size(112, 21);
-            luongCoBanLabel.TabIndex = 1;
-            luongCoBanLabel.Text = "Lương Cơ Bản";
+            this.luongCoBanLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.luongCoBanLabel.AutoSize = true;
+            this.luongCoBanLabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.luongCoBanLabel.Location = new System.Drawing.Point(3, 74);
+            this.luongCoBanLabel.Name = "luongCoBanLabel";
+            this.luongCoBanLabel.Size = new System.Drawing.Size(86, 16);
+            this.luongCoBanLabel.TabIndex = 1;
+            this.luongCoBanLabel.Text = "Lương Cơ Bản";
             // 
             // heSoLuong
             // 
-            heSoLuong.Anchor = AnchorStyles.Left;
-            heSoLuong.AutoSize = true;
-            heSoLuong.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            heSoLuong.Location = new Point(3, 174);
-            heSoLuong.Name = "heSoLuong";
-            heSoLuong.Size = new Size(103, 21);
-            heSoLuong.TabIndex = 2;
-            heSoLuong.Text = "Hệ Số Lương";
+            this.heSoLuong.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.heSoLuong.AutoSize = true;
+            this.heSoLuong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.heSoLuong.Location = new System.Drawing.Point(3, 129);
+            this.heSoLuong.Name = "heSoLuong";
+            this.heSoLuong.Size = new System.Drawing.Size(80, 16);
+            this.heSoLuong.TabIndex = 2;
+            this.heSoLuong.Text = "Hệ Số Lương";
             // 
             // luongThuongLabel
             // 
-            luongThuongLabel.Anchor = AnchorStyles.Left;
-            luongThuongLabel.AutoSize = true;
-            luongThuongLabel.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            luongThuongLabel.Location = new Point(3, 248);
-            luongThuongLabel.Name = "luongThuongLabel";
-            luongThuongLabel.Size = new Size(116, 21);
-            luongThuongLabel.TabIndex = 3;
-            luongThuongLabel.Text = "Lương Thưởng";
+            this.luongThuongLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.luongThuongLabel.AutoSize = true;
+            this.luongThuongLabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.luongThuongLabel.Location = new System.Drawing.Point(3, 184);
+            this.luongThuongLabel.Name = "luongThuongLabel";
+            this.luongThuongLabel.Size = new System.Drawing.Size(90, 16);
+            this.luongThuongLabel.TabIndex = 3;
+            this.luongThuongLabel.Text = "Lương Thưởng";
             // 
             // luongPhatLabel
             // 
-            luongPhatLabel.Anchor = AnchorStyles.Left;
-            luongPhatLabel.AutoSize = true;
-            luongPhatLabel.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            luongPhatLabel.Location = new Point(3, 323);
-            luongPhatLabel.Name = "luongPhatLabel";
-            luongPhatLabel.Size = new Size(93, 21);
-            luongPhatLabel.TabIndex = 4;
-            luongPhatLabel.Text = "Lương Phạt";
+            this.luongPhatLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.luongPhatLabel.AutoSize = true;
+            this.luongPhatLabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.luongPhatLabel.Location = new System.Drawing.Point(3, 241);
+            this.luongPhatLabel.Name = "luongPhatLabel";
+            this.luongPhatLabel.Size = new System.Drawing.Size(71, 16);
+            this.luongPhatLabel.TabIndex = 4;
+            this.luongPhatLabel.Text = "Lương Phạt";
             // 
             // hienThiLuongLabel
             // 
-            hienThiLuongLabel.Anchor = AnchorStyles.Right;
-            hienThiLuongLabel.AutoSize = true;
-            hienThiLuongLabel.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            hienThiLuongLabel.Location = new Point(466, 100);
-            hienThiLuongLabel.Name = "hienThiLuongLabel";
-            hienThiLuongLabel.Size = new Size(62, 21);
-            hienThiLuongLabel.TabIndex = 5;
-            hienThiLuongLabel.Text = "label6";
+            this.hienThiLuongLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.hienThiLuongLabel.AutoSize = true;
+            this.hienThiLuongLabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hienThiLuongLabel.Location = new System.Drawing.Point(417, 74);
+            this.hienThiLuongLabel.Name = "hienThiLuongLabel";
+            this.hienThiLuongLabel.Size = new System.Drawing.Size(45, 16);
+            this.hienThiLuongLabel.TabIndex = 5;
+            this.hienThiLuongLabel.Text = "label6";
             // 
             // hienThiHSLuongLabel
             // 
-            hienThiHSLuongLabel.Anchor = AnchorStyles.Right;
-            hienThiHSLuongLabel.AutoSize = true;
-            hienThiHSLuongLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            hienThiHSLuongLabel.Location = new Point(469, 173);
-            hienThiHSLuongLabel.Name = "hienThiHSLuongLabel";
-            hienThiHSLuongLabel.Size = new Size(59, 23);
-            hienThiHSLuongLabel.TabIndex = 6;
-            hienThiHSLuongLabel.Text = "label7";
+            this.hienThiHSLuongLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.hienThiHSLuongLabel.AutoSize = true;
+            this.hienThiHSLuongLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hienThiHSLuongLabel.Location = new System.Drawing.Point(417, 129);
+            this.hienThiHSLuongLabel.Name = "hienThiHSLuongLabel";
+            this.hienThiHSLuongLabel.Size = new System.Drawing.Size(45, 17);
+            this.hienThiHSLuongLabel.TabIndex = 6;
+            this.hienThiHSLuongLabel.Text = "label7";
             // 
             // hienThiLuongThuongLabel
             // 
-            hienThiLuongThuongLabel.Anchor = AnchorStyles.Right;
-            hienThiLuongThuongLabel.AutoSize = true;
-            hienThiLuongThuongLabel.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            hienThiLuongThuongLabel.Location = new Point(466, 248);
-            hienThiLuongThuongLabel.Name = "hienThiLuongThuongLabel";
-            hienThiLuongThuongLabel.Size = new Size(62, 21);
-            hienThiLuongThuongLabel.TabIndex = 7;
-            hienThiLuongThuongLabel.Text = "label8";
+            this.hienThiLuongThuongLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.hienThiLuongThuongLabel.AutoSize = true;
+            this.hienThiLuongThuongLabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hienThiLuongThuongLabel.Location = new System.Drawing.Point(417, 184);
+            this.hienThiLuongThuongLabel.Name = "hienThiLuongThuongLabel";
+            this.hienThiLuongThuongLabel.Size = new System.Drawing.Size(45, 16);
+            this.hienThiLuongThuongLabel.TabIndex = 7;
+            this.hienThiLuongThuongLabel.Text = "label8";
             // 
             // hienThiLuongPhatLabel
             // 
-            hienThiLuongPhatLabel.Anchor = AnchorStyles.Right;
-            hienThiLuongPhatLabel.AutoSize = true;
-            hienThiLuongPhatLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            hienThiLuongPhatLabel.Location = new Point(469, 322);
-            hienThiLuongPhatLabel.Name = "hienThiLuongPhatLabel";
-            hienThiLuongPhatLabel.Size = new Size(59, 23);
-            hienThiLuongPhatLabel.TabIndex = 8;
-            hienThiLuongPhatLabel.Text = "label9";
+            this.hienThiLuongPhatLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.hienThiLuongPhatLabel.AutoSize = true;
+            this.hienThiLuongPhatLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hienThiLuongPhatLabel.Location = new System.Drawing.Point(417, 240);
+            this.hienThiLuongPhatLabel.Name = "hienThiLuongPhatLabel";
+            this.hienThiLuongPhatLabel.Size = new System.Drawing.Size(45, 17);
+            this.hienThiLuongPhatLabel.TabIndex = 8;
+            this.hienThiLuongPhatLabel.Text = "label9";
             // 
             // projectDataGridView
             // 
-            projectDataGridView.AllowUserToAddRows = false;
-            projectDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
-            projectDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            luongTable.SetColumnSpan(projectDataGridView, 3);
-            projectDataGridView.Location = new Point(3, 455);
-            projectDataGridView.Margin = new Padding(3, 4, 3, 4);
-            projectDataGridView.Name = "projectDataGridView";
-            projectDataGridView.ReadOnly = true;
-            projectDataGridView.RowHeadersVisible = false;
-            projectDataGridView.RowHeadersWidth = 51;
-            projectDataGridView.RowTemplate.Height = 25;
-            projectDataGridView.Size = new Size(1147, 184);
-            projectDataGridView.TabIndex = 4;
-            projectDataGridView.RowPrePaint += projectDataGridView_RowPrePaint;
+            this.projectDataGridView.AllowUserToAddRows = false;
+            this.projectDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.projectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.luongTable.SetColumnSpan(this.projectDataGridView, 3);
+            this.projectDataGridView.Location = new System.Drawing.Point(3, 341);
+            this.projectDataGridView.Name = "projectDataGridView";
+            this.projectDataGridView.ReadOnly = true;
+            this.projectDataGridView.RowHeadersVisible = false;
+            this.projectDataGridView.RowHeadersWidth = 51;
+            this.projectDataGridView.RowTemplate.Height = 25;
+            this.projectDataGridView.Size = new System.Drawing.Size(1004, 138);
+            this.projectDataGridView.TabIndex = 4;
             // 
             // thongTinTable
             // 
-            thongTinTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            thongTinTable.BackColor = Color.Transparent;
-            thongTinTable.ColumnCount = 2;
-            thongTinTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            thongTinTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
-            thongTinTable.Controls.Add(gioiTinhLabel, 0, 2);
-            thongTinTable.Controls.Add(phongBanLabel, 0, 9);
-            thongTinTable.Controls.Add(chucVuLabel, 0, 8);
-            thongTinTable.Controls.Add(diaChiLabel, 0, 6);
-            thongTinTable.Controls.Add(sdtLabel, 0, 5);
-            thongTinTable.Controls.Add(emailLabel, 0, 4);
-            thongTinTable.Controls.Add(hoTenTextBox, 1, 0);
-            thongTinTable.Controls.Add(ngaySinhLabel, 0, 1);
-            thongTinTable.Controls.Add(hoTenLabel, 0, 0);
-            thongTinTable.Controls.Add(ngaySinhTextBox, 1, 1);
-            thongTinTable.Controls.Add(emailTextBox, 1, 4);
-            thongTinTable.Controls.Add(soDienThoaiTextBox, 1, 5);
-            thongTinTable.Controls.Add(diaChiTextBox, 1, 6);
-            thongTinTable.Controls.Add(chucVuTextBox, 1, 8);
-            thongTinTable.Controls.Add(phongBanTextBox, 1, 9);
-            thongTinTable.Controls.Add(gioiTinhComboBox, 1, 2);
-            thongTinTable.Location = new Point(586, 4);
-            thongTinTable.Margin = new Padding(3, 4, 3, 4);
-            thongTinTable.Name = "thongTinTable";
-            thongTinTable.RowCount = 10;
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.RowStyles.Add(new RowStyle(SizeType.Percent, 9.999999F));
-            thongTinTable.Size = new Size(572, 387);
-            thongTinTable.TabIndex = 1;
+            this.thongTinTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.thongTinTable.BackColor = System.Drawing.Color.Transparent;
+            this.thongTinTable.ColumnCount = 2;
+            this.thongTinTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thongTinTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.thongTinTable.Controls.Add(this.gioiTinhLabel, 0, 2);
+            this.thongTinTable.Controls.Add(this.phongBanLabel, 0, 9);
+            this.thongTinTable.Controls.Add(this.chucVuLabel, 0, 8);
+            this.thongTinTable.Controls.Add(this.diaChiLabel, 0, 6);
+            this.thongTinTable.Controls.Add(this.sdtLabel, 0, 5);
+            this.thongTinTable.Controls.Add(this.emailLabel, 0, 4);
+            this.thongTinTable.Controls.Add(this.hoTenTextBox, 1, 0);
+            this.thongTinTable.Controls.Add(this.ngaySinhLabel, 0, 1);
+            this.thongTinTable.Controls.Add(this.hoTenLabel, 0, 0);
+            this.thongTinTable.Controls.Add(this.ngaySinhTextBox, 1, 1);
+            this.thongTinTable.Controls.Add(this.emailTextBox, 1, 4);
+            this.thongTinTable.Controls.Add(this.soDienThoaiTextBox, 1, 5);
+            this.thongTinTable.Controls.Add(this.diaChiTextBox, 1, 6);
+            this.thongTinTable.Controls.Add(this.chucVuTextBox, 1, 8);
+            this.thongTinTable.Controls.Add(this.phongBanTextBox, 1, 9);
+            this.thongTinTable.Controls.Add(this.gioiTinhComboBox, 1, 2);
+            this.thongTinTable.Location = new System.Drawing.Point(513, 3);
+            this.thongTinTable.Name = "thongTinTable";
+            this.thongTinTable.RowCount = 10;
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
+            this.thongTinTable.Size = new System.Drawing.Size(500, 290);
+            this.thongTinTable.TabIndex = 1;
             // 
             // gioiTinhLabel
             // 
-            gioiTinhLabel.Anchor = AnchorStyles.Left;
-            gioiTinhLabel.AutoSize = true;
-            gioiTinhLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            gioiTinhLabel.Location = new Point(3, 86);
-            gioiTinhLabel.Name = "gioiTinhLabel";
-            gioiTinhLabel.Size = new Size(63, 18);
-            gioiTinhLabel.TabIndex = 2;
-            gioiTinhLabel.Text = "Giới Tính";
-            gioiTinhLabel.TextAlign = ContentAlignment.TopCenter;
+            this.gioiTinhLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.gioiTinhLabel.AutoSize = true;
+            this.gioiTinhLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gioiTinhLabel.Location = new System.Drawing.Point(3, 65);
+            this.gioiTinhLabel.Name = "gioiTinhLabel";
+            this.gioiTinhLabel.Size = new System.Drawing.Size(54, 14);
+            this.gioiTinhLabel.TabIndex = 2;
+            this.gioiTinhLabel.Text = "Giới Tính";
+            this.gioiTinhLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // phongBanLabel
             // 
-            phongBanLabel.Anchor = AnchorStyles.Left;
-            phongBanLabel.AutoSize = true;
-            phongBanLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            phongBanLabel.Location = new Point(3, 355);
-            phongBanLabel.Name = "phongBanLabel";
-            phongBanLabel.Size = new Size(78, 18);
-            phongBanLabel.TabIndex = 7;
-            phongBanLabel.Text = "Phòng Ban";
-            phongBanLabel.TextAlign = ContentAlignment.TopCenter;
+            this.phongBanLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.phongBanLabel.AutoSize = true;
+            this.phongBanLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.phongBanLabel.Location = new System.Drawing.Point(3, 268);
+            this.phongBanLabel.Name = "phongBanLabel";
+            this.phongBanLabel.Size = new System.Drawing.Size(66, 14);
+            this.phongBanLabel.TabIndex = 7;
+            this.phongBanLabel.Text = "Phòng Ban";
+            this.phongBanLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // chucVuLabel
             // 
-            chucVuLabel.Anchor = AnchorStyles.Left;
-            chucVuLabel.AutoSize = true;
-            chucVuLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            chucVuLabel.Location = new Point(3, 314);
-            chucVuLabel.Name = "chucVuLabel";
-            chucVuLabel.Size = new Size(63, 18);
-            chucVuLabel.TabIndex = 6;
-            chucVuLabel.Text = "Chức Vụ";
-            chucVuLabel.TextAlign = ContentAlignment.TopCenter;
+            this.chucVuLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.chucVuLabel.AutoSize = true;
+            this.chucVuLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.chucVuLabel.Location = new System.Drawing.Point(3, 239);
+            this.chucVuLabel.Name = "chucVuLabel";
+            this.chucVuLabel.Size = new System.Drawing.Size(54, 14);
+            this.chucVuLabel.TabIndex = 6;
+            this.chucVuLabel.Text = "Chức Vụ";
+            this.chucVuLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // diaChiLabel
             // 
-            diaChiLabel.Anchor = AnchorStyles.Left;
-            diaChiLabel.AutoSize = true;
-            diaChiLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            diaChiLabel.Location = new Point(3, 238);
-            diaChiLabel.Name = "diaChiLabel";
-            diaChiLabel.Size = new Size(52, 18);
-            diaChiLabel.TabIndex = 5;
-            diaChiLabel.Text = "Địa Chỉ";
-            diaChiLabel.TextAlign = ContentAlignment.TopCenter;
+            this.diaChiLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.diaChiLabel.AutoSize = true;
+            this.diaChiLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.diaChiLabel.Location = new System.Drawing.Point(3, 181);
+            this.diaChiLabel.Name = "diaChiLabel";
+            this.diaChiLabel.Size = new System.Drawing.Size(43, 14);
+            this.diaChiLabel.TabIndex = 5;
+            this.diaChiLabel.Text = "Địa Chỉ";
+            this.diaChiLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // sdtLabel
             // 
-            sdtLabel.Anchor = AnchorStyles.Left;
-            sdtLabel.AutoSize = true;
-            sdtLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            sdtLabel.Location = new Point(3, 200);
-            sdtLabel.Name = "sdtLabel";
-            sdtLabel.Size = new Size(98, 18);
-            sdtLabel.TabIndex = 4;
-            sdtLabel.Text = "Số Điện Thoại";
-            sdtLabel.TextAlign = ContentAlignment.TopCenter;
+            this.sdtLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.sdtLabel.AutoSize = true;
+            this.sdtLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sdtLabel.Location = new System.Drawing.Point(3, 152);
+            this.sdtLabel.Name = "sdtLabel";
+            this.sdtLabel.Size = new System.Drawing.Size(83, 14);
+            this.sdtLabel.TabIndex = 4;
+            this.sdtLabel.Text = "Số Điện Thoại";
+            this.sdtLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // emailLabel
             // 
-            emailLabel.Anchor = AnchorStyles.Left;
-            emailLabel.AutoSize = true;
-            emailLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            emailLabel.Location = new Point(3, 162);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(41, 18);
-            emailLabel.TabIndex = 3;
-            emailLabel.Text = "Email";
-            emailLabel.TextAlign = ContentAlignment.TopCenter;
+            this.emailLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.emailLabel.Location = new System.Drawing.Point(3, 123);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(34, 14);
+            this.emailLabel.TabIndex = 3;
+            this.emailLabel.Text = "Email";
+            this.emailLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // hoTenTextBox
             // 
-            hoTenTextBox.Anchor = AnchorStyles.None;
-            hoTenTextBox.BackColor = SystemColors.ScrollBar;
-            hoTenTextBox.Enabled = false;
-            hoTenTextBox.Location = new Point(118, 5);
-            hoTenTextBox.Margin = new Padding(3, 4, 3, 4);
-            hoTenTextBox.Name = "hoTenTextBox";
-            hoTenTextBox.ReadOnly = true;
-            hoTenTextBox.Size = new Size(449, 27);
-            hoTenTextBox.TabIndex = 8;
+            this.hoTenTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.hoTenTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.hoTenTextBox.Enabled = false;
+            this.hoTenTextBox.Location = new System.Drawing.Point(103, 3);
+            this.hoTenTextBox.Name = "hoTenTextBox";
+            this.hoTenTextBox.ReadOnly = true;
+            this.hoTenTextBox.Size = new System.Drawing.Size(393, 23);
+            this.hoTenTextBox.TabIndex = 8;
             // 
             // ngaySinhLabel
             // 
-            ngaySinhLabel.Anchor = AnchorStyles.Left;
-            ngaySinhLabel.AutoSize = true;
-            ngaySinhLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ngaySinhLabel.Location = new Point(3, 48);
-            ngaySinhLabel.Name = "ngaySinhLabel";
-            ngaySinhLabel.Size = new Size(73, 18);
-            ngaySinhLabel.TabIndex = 1;
-            ngaySinhLabel.Text = "Ngày Sinh";
-            ngaySinhLabel.TextAlign = ContentAlignment.TopCenter;
+            this.ngaySinhLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ngaySinhLabel.AutoSize = true;
+            this.ngaySinhLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ngaySinhLabel.Location = new System.Drawing.Point(3, 36);
+            this.ngaySinhLabel.Name = "ngaySinhLabel";
+            this.ngaySinhLabel.Size = new System.Drawing.Size(61, 14);
+            this.ngaySinhLabel.TabIndex = 1;
+            this.ngaySinhLabel.Text = "Ngày Sinh";
+            this.ngaySinhLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // hoTenLabel
             // 
-            hoTenLabel.Anchor = AnchorStyles.Left;
-            hoTenLabel.AutoSize = true;
-            hoTenLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            hoTenLabel.Location = new Point(3, 10);
-            hoTenLabel.Name = "hoTenLabel";
-            hoTenLabel.Size = new Size(57, 18);
-            hoTenLabel.TabIndex = 9;
-            hoTenLabel.Text = "Họ Tên";
+            this.hoTenLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.hoTenLabel.AutoSize = true;
+            this.hoTenLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.hoTenLabel.Location = new System.Drawing.Point(3, 7);
+            this.hoTenLabel.Name = "hoTenLabel";
+            this.hoTenLabel.Size = new System.Drawing.Size(48, 14);
+            this.hoTenLabel.TabIndex = 9;
+            this.hoTenLabel.Text = "Họ Tên";
             // 
             // ngaySinhTextBox
             // 
-            ngaySinhTextBox.Anchor = AnchorStyles.Left;
-            ngaySinhTextBox.BackColor = SystemColors.ScrollBar;
-            ngaySinhTextBox.Enabled = false;
-            ngaySinhTextBox.Location = new Point(117, 43);
-            ngaySinhTextBox.Margin = new Padding(3, 4, 3, 4);
-            ngaySinhTextBox.Name = "ngaySinhTextBox";
-            ngaySinhTextBox.ReadOnly = true;
-            ngaySinhTextBox.Size = new Size(449, 27);
-            ngaySinhTextBox.TabIndex = 10;
+            this.ngaySinhTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ngaySinhTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ngaySinhTextBox.Enabled = false;
+            this.ngaySinhTextBox.Location = new System.Drawing.Point(103, 32);
+            this.ngaySinhTextBox.Name = "ngaySinhTextBox";
+            this.ngaySinhTextBox.ReadOnly = true;
+            this.ngaySinhTextBox.Size = new System.Drawing.Size(393, 23);
+            this.ngaySinhTextBox.TabIndex = 10;
             // 
             // emailTextBox
             // 
-            emailTextBox.Anchor = AnchorStyles.Left;
-            emailTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            emailTextBox.Location = new Point(117, 157);
-            emailTextBox.Margin = new Padding(3, 4, 3, 4);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(449, 27);
-            emailTextBox.TabIndex = 12;
-            emailTextBox.TextChanged += txtBoxChanged;
-            emailTextBox.KeyPress += txtKeyPress;
-            emailTextBox.Leave += emailTextBox_Leave;
+            this.emailTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.emailTextBox.Location = new System.Drawing.Point(103, 119);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(393, 23);
+            this.emailTextBox.TabIndex = 12;
+            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // soDienThoaiTextBox
             // 
-            soDienThoaiTextBox.Anchor = AnchorStyles.Left;
-            soDienThoaiTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            soDienThoaiTextBox.Location = new Point(117, 195);
-            soDienThoaiTextBox.Margin = new Padding(3, 4, 3, 4);
-            soDienThoaiTextBox.Name = "soDienThoaiTextBox";
-            soDienThoaiTextBox.Size = new Size(449, 27);
-            soDienThoaiTextBox.TabIndex = 13;
-            soDienThoaiTextBox.TextChanged += txtBoxChanged;
-            soDienThoaiTextBox.KeyPress += txtKeyPress;
-            soDienThoaiTextBox.Leave += soDienThoaiTextBox_Leave;
+            this.soDienThoaiTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.soDienThoaiTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.soDienThoaiTextBox.Location = new System.Drawing.Point(103, 148);
+            this.soDienThoaiTextBox.Name = "soDienThoaiTextBox";
+            this.soDienThoaiTextBox.Size = new System.Drawing.Size(393, 23);
+            this.soDienThoaiTextBox.TabIndex = 13;
+            this.soDienThoaiTextBox.Leave += new System.EventHandler(this.soDienThoaiTextBox_Leave);
             // 
             // diaChiTextBox
             // 
-            diaChiTextBox.Anchor = AnchorStyles.Left;
-            diaChiTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            diaChiTextBox.Location = new Point(117, 233);
-            diaChiTextBox.Margin = new Padding(3, 4, 3, 4);
-            diaChiTextBox.Name = "diaChiTextBox";
-            diaChiTextBox.Size = new Size(449, 27);
-            diaChiTextBox.TabIndex = 14;
-            diaChiTextBox.TextChanged += txtBoxChanged;
-            diaChiTextBox.KeyPress += txtKeyPress;
-            diaChiTextBox.Leave += diaChiTextBox_Leave;
+            this.diaChiTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.diaChiTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.diaChiTextBox.Location = new System.Drawing.Point(103, 177);
+            this.diaChiTextBox.Name = "diaChiTextBox";
+            this.diaChiTextBox.Size = new System.Drawing.Size(393, 23);
+            this.diaChiTextBox.TabIndex = 14;
+            this.diaChiTextBox.Leave += new System.EventHandler(this.diaChiTextBox_Leave);
             // 
             // chucVuTextBox
             // 
-            chucVuTextBox.Anchor = AnchorStyles.Left;
-            chucVuTextBox.BackColor = SystemColors.ScrollBar;
-            chucVuTextBox.Enabled = false;
-            chucVuTextBox.Location = new Point(117, 309);
-            chucVuTextBox.Margin = new Padding(3, 4, 3, 4);
-            chucVuTextBox.Name = "chucVuTextBox";
-            chucVuTextBox.ReadOnly = true;
-            chucVuTextBox.Size = new Size(449, 27);
-            chucVuTextBox.TabIndex = 15;
+            this.chucVuTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.chucVuTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.chucVuTextBox.Enabled = false;
+            this.chucVuTextBox.Location = new System.Drawing.Point(103, 235);
+            this.chucVuTextBox.Name = "chucVuTextBox";
+            this.chucVuTextBox.ReadOnly = true;
+            this.chucVuTextBox.Size = new System.Drawing.Size(393, 23);
+            this.chucVuTextBox.TabIndex = 15;
             // 
             // phongBanTextBox
             // 
-            phongBanTextBox.Anchor = AnchorStyles.Left;
-            phongBanTextBox.BackColor = SystemColors.ScrollBar;
-            phongBanTextBox.Enabled = false;
-            phongBanTextBox.Location = new Point(117, 351);
-            phongBanTextBox.Margin = new Padding(3, 4, 3, 4);
-            phongBanTextBox.Name = "phongBanTextBox";
-            phongBanTextBox.ReadOnly = true;
-            phongBanTextBox.Size = new Size(449, 27);
-            phongBanTextBox.TabIndex = 16;
+            this.phongBanTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.phongBanTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.phongBanTextBox.Enabled = false;
+            this.phongBanTextBox.Location = new System.Drawing.Point(103, 264);
+            this.phongBanTextBox.Name = "phongBanTextBox";
+            this.phongBanTextBox.ReadOnly = true;
+            this.phongBanTextBox.Size = new System.Drawing.Size(393, 23);
+            this.phongBanTextBox.TabIndex = 16;
             // 
             // gioiTinhComboBox
             // 
-            gioiTinhComboBox.BackColor = SystemColors.Window;
-            gioiTinhComboBox.Dock = DockStyle.Fill;
-            gioiTinhComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            gioiTinhComboBox.Enabled = false;
-            gioiTinhComboBox.FormattingEnabled = true;
-            gioiTinhComboBox.Items.AddRange(new object[] { "Nữ", "Nam" });
-            gioiTinhComboBox.Location = new Point(117, 80);
-            gioiTinhComboBox.Margin = new Padding(3, 4, 3, 4);
-            gioiTinhComboBox.Name = "gioiTinhComboBox";
-            gioiTinhComboBox.Size = new Size(452, 28);
-            gioiTinhComboBox.TabIndex = 17;
+            this.gioiTinhComboBox.BackColor = System.Drawing.SystemColors.Window;
+            this.gioiTinhComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gioiTinhComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gioiTinhComboBox.Enabled = false;
+            this.gioiTinhComboBox.FormattingEnabled = true;
+            this.gioiTinhComboBox.Items.AddRange(new object[] {
+            "Nữ",
+            "Nam"});
+            this.gioiTinhComboBox.Location = new System.Drawing.Point(103, 61);
+            this.gioiTinhComboBox.Name = "gioiTinhComboBox";
+            this.gioiTinhComboBox.Size = new System.Drawing.Size(394, 23);
+            this.gioiTinhComboBox.TabIndex = 17;
             // 
             // tableLayoutPanel3
             // 
-            tableLayoutPanel3.BackColor = Color.Transparent;
-            tableLayoutPanel3.ColumnCount = 4;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 19.880352F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.70655F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.70655F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.70655F));
-            tableLayoutPanel3.Controls.Add(ngayThamGiaTextBox, 1, 0);
-            tableLayoutPanel3.Controls.Add(trangThaiTextBox, 3, 0);
-            tableLayoutPanel3.Controls.Add(ngayThamGiaLabel, 0, 0);
-            tableLayoutPanel3.Controls.Add(trangThaiLabel, 2, 0);
-            tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(586, 399);
-            tableLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(572, 48);
-            tableLayoutPanel3.TabIndex = 9;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel3.ColumnCount = 4;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.88035F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.70655F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.70655F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.70655F));
+            this.tableLayoutPanel3.Controls.Add(this.ngayThamGiaTextBox, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.trangThaiTextBox, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.ngayThamGiaLabel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.trangThaiLabel, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(513, 299);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(500, 36);
+            this.tableLayoutPanel3.TabIndex = 9;
             // 
             // ngayThamGiaTextBox
             // 
-            ngayThamGiaTextBox.BackColor = SystemColors.ScrollBar;
-            ngayThamGiaTextBox.Enabled = false;
-            ngayThamGiaTextBox.Location = new Point(116, 4);
-            ngayThamGiaTextBox.Margin = new Padding(3, 4, 3, 4);
-            ngayThamGiaTextBox.Name = "ngayThamGiaTextBox";
-            ngayThamGiaTextBox.ReadOnly = true;
-            ngayThamGiaTextBox.Size = new Size(135, 27);
-            ngayThamGiaTextBox.TabIndex = 2;
+            this.ngayThamGiaTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ngayThamGiaTextBox.Enabled = false;
+            this.ngayThamGiaTextBox.Location = new System.Drawing.Point(102, 3);
+            this.ngayThamGiaTextBox.Name = "ngayThamGiaTextBox";
+            this.ngayThamGiaTextBox.ReadOnly = true;
+            this.ngayThamGiaTextBox.Size = new System.Drawing.Size(119, 23);
+            this.ngayThamGiaTextBox.TabIndex = 2;
             // 
             // trangThaiTextBox
             // 
-            trangThaiTextBox.BackColor = SystemColors.ScrollBar;
-            trangThaiTextBox.Enabled = false;
-            trangThaiTextBox.Location = new Point(420, 4);
-            trangThaiTextBox.Margin = new Padding(3, 4, 3, 4);
-            trangThaiTextBox.Name = "trangThaiTextBox";
-            trangThaiTextBox.ReadOnly = true;
-            trangThaiTextBox.Size = new Size(146, 27);
-            trangThaiTextBox.TabIndex = 3;
+            this.trangThaiTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.trangThaiTextBox.Enabled = false;
+            this.trangThaiTextBox.Location = new System.Drawing.Point(368, 3);
+            this.trangThaiTextBox.Name = "trangThaiTextBox";
+            this.trangThaiTextBox.ReadOnly = true;
+            this.trangThaiTextBox.Size = new System.Drawing.Size(128, 23);
+            this.trangThaiTextBox.TabIndex = 3;
             // 
             // ngayThamGiaLabel
             // 
-            ngayThamGiaLabel.AutoSize = true;
-            ngayThamGiaLabel.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ngayThamGiaLabel.Location = new Point(3, 0);
-            ngayThamGiaLabel.Name = "ngayThamGiaLabel";
-            ngayThamGiaLabel.Padding = new Padding(0, 7, 0, 0);
-            ngayThamGiaLabel.Size = new Size(91, 43);
-            ngayThamGiaLabel.TabIndex = 0;
-            ngayThamGiaLabel.Text = "Ngày Tham Gia";
+            this.ngayThamGiaLabel.AutoSize = true;
+            this.ngayThamGiaLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ngayThamGiaLabel.Location = new System.Drawing.Point(3, 0);
+            this.ngayThamGiaLabel.Name = "ngayThamGiaLabel";
+            this.ngayThamGiaLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.ngayThamGiaLabel.Size = new System.Drawing.Size(89, 19);
+            this.ngayThamGiaLabel.TabIndex = 0;
+            this.ngayThamGiaLabel.Text = "Ngày Tham Gia";
             // 
             // trangThaiLabel
             // 
-            trangThaiLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            trangThaiLabel.AutoSize = true;
-            trangThaiLabel.Location = new Point(336, 0);
-            trangThaiLabel.Name = "trangThaiLabel";
-            trangThaiLabel.Padding = new Padding(0, 7, 0, 0);
-            trangThaiLabel.Size = new Size(78, 27);
-            trangThaiLabel.TabIndex = 4;
-            trangThaiLabel.Text = "Trạng Thái";
+            this.trangThaiLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.trangThaiLabel.AutoSize = true;
+            this.trangThaiLabel.Location = new System.Drawing.Point(301, 0);
+            this.trangThaiLabel.Name = "trangThaiLabel";
+            this.trangThaiLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.trangThaiLabel.Size = new System.Drawing.Size(61, 20);
+            this.trangThaiLabel.TabIndex = 4;
+            this.trangThaiLabel.Text = "Trạng Thái";
             // 
             // luongTable
             // 
-            luongTable.BackColor = Color.Transparent;
-            luongTable.ColumnCount = 3;
-            luongTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            luongTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 6F));
-            luongTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            luongTable.Controls.Add(tableLayoutPanel3, 2, 1);
-            luongTable.Controls.Add(thongTinTable, 2, 0);
-            luongTable.Controls.Add(chiTietLuongTable, 0, 0);
-            luongTable.Controls.Add(tongLuongThucNhanTable, 0, 1);
-            luongTable.Controls.Add(panel1, 1, 0);
-            luongTable.Controls.Add(projectDataGridView, 0, 2);
-            luongTable.Location = new Point(17, 95);
-            luongTable.Margin = new Padding(3, 4, 3, 4);
-            luongTable.Name = "luongTable";
-            luongTable.RowCount = 3;
-            luongTable.RowStyles.Add(new RowStyle(SizeType.Percent, 61.41079F));
-            luongTable.RowStyles.Add(new RowStyle(SizeType.Percent, 8.713693F));
-            luongTable.RowStyles.Add(new RowStyle(SizeType.Percent, 29.6680489F));
-            luongTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
-            luongTable.Size = new Size(1161, 643);
-            luongTable.TabIndex = 5;
+            this.luongTable.BackColor = System.Drawing.Color.Transparent;
+            this.luongTable.ColumnCount = 3;
+            this.luongTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.luongTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.luongTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.luongTable.Controls.Add(this.tableLayoutPanel3, 2, 1);
+            this.luongTable.Controls.Add(this.thongTinTable, 2, 0);
+            this.luongTable.Controls.Add(this.chiTietLuongTable, 0, 0);
+            this.luongTable.Controls.Add(this.tongLuongThucNhanTable, 0, 1);
+            this.luongTable.Controls.Add(this.panel1, 1, 0);
+            this.luongTable.Controls.Add(this.projectDataGridView, 0, 2);
+            this.luongTable.Location = new System.Drawing.Point(15, 71);
+            this.luongTable.Name = "luongTable";
+            this.luongTable.RowCount = 3;
+            this.luongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.41079F));
+            this.luongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.713693F));
+            this.luongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.66805F));
+            this.luongTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.luongTable.Size = new System.Drawing.Size(1016, 482);
+            this.luongTable.TabIndex = 5;
             // 
             // UserForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(249, 249, 249);
-            ClientSize = new Size(1195, 753);
-            Controls.Add(luongTable);
-            Controls.Add(functionFlowPanel);
-            Controls.Add(stripMenu);
-            ForeColor = SystemColors.ControlText;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MainMenuStrip = stripMenu;
-            Margin = new Padding(3, 4, 3, 4);
-            MaximizeBox = false;
-            Name = "UserForm";
-            Padding = new Padding(17, 0, 17, 0);
-            Text = "Thông tin nhân viên";
-            FormClosed += UserForm_FormClosed;
-            Load += UserForm_Load;
-            functionFlowPanel.ResumeLayout(false);
-            stripMenu.ResumeLayout(false);
-            stripMenu.PerformLayout();
-            tongLuongThucNhanTable.ResumeLayout(false);
-            tongLuongThucNhanTable.PerformLayout();
-            chiTietLuongTable.ResumeLayout(false);
-            chiTietLuongTable.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)projectDataGridView).EndInit();
-            thongTinTable.ResumeLayout(false);
-            thongTinTable.PerformLayout();
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
-            luongTable.ResumeLayout(false);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.ClientSize = new System.Drawing.Size(1046, 562);
+            this.Controls.Add(this.luongTable);
+            this.Controls.Add(this.functionFlowPanel);
+            this.Controls.Add(this.stripMenu);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.stripMenu;
+            this.MaximizeBox = false;
+            this.Name = "UserForm";
+            this.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.Text = "Thông tin nhân viên";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserForm_FormClosed);
+            this.Load += new System.EventHandler(this.UserForm_Load);
+            this.functionFlowPanel.ResumeLayout(false);
+            this.stripMenu.ResumeLayout(false);
+            this.stripMenu.PerformLayout();
+            this.tongLuongThucNhanTable.ResumeLayout(false);
+            this.tongLuongThucNhanTable.PerformLayout();
+            this.chiTietLuongTable.ResumeLayout(false);
+            this.chiTietLuongTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDataGridView)).EndInit();
+            this.thongTinTable.ResumeLayout(false);
+            this.thongTinTable.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.luongTable.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

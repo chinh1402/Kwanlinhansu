@@ -48,15 +48,16 @@ namespace quanlihosonhansu.Admin__hosonhansu
         private void hosonhansu_Load(object sender, EventArgs e)
         {
             sql = "SELECT n.id, n.ho_ten, n.ngay_sinh, " +
-              "CASE n.gioi_tinh " +
-              "   WHEN '0' THEN 'male' " +
-              "   WHEN '1' THEN 'female' " +
-              "   WHEN '2' THEN 'other' " +
-              "   ELSE 'unknown' END AS gioi_tinh, " +
-              "n.email, n.sdt, n.dia_chi, n.ngay_tham_gia, n.luong_co_ban, n.he_so_luong, " +
-              "p.ten AS phong_ban_ten, n.is_staff, n.trang_thai " +
-              "FROM nhanvien n " +
-              "INNER JOIN phongban p ON n.phong_ban_id = p.id";
+      "CASE n.gioi_tinh " +
+      "   WHEN '0' THEN 'male' " +
+      "   WHEN '1' THEN 'female' " +
+      "   WHEN '2' THEN 'other' " +
+      "   ELSE 'unknown' END AS gioi_tinh, " +
+      "n.email, n.sdt, n.dia_chi, n.ngay_tham_gia, n.luong_co_ban, n.he_so_luong, " +
+      "p.ten AS phong_ban_ten, n.is_staff, n.trang_thai " +
+      "FROM nhanvien n " +
+      "LEFT JOIN phongban p ON n.phong_ban_id = p.id";
+
             dataGridView1.DataSource = Getdata.getData(sql);
 
             // Default settings
@@ -264,7 +265,7 @@ namespace quanlihosonhansu.Admin__hosonhansu
               "n.email, n.sdt, n.dia_chi, n.ngay_tham_gia, n.luong_co_ban, n.he_so_luong, " +
               "p.ten AS phong_ban_ten, n.is_staff, n.trang_thai " +
               "FROM nhanvien n " +
-              "INNER JOIN phongban p ON n.phong_ban_id = p.id " +
+              "LEFT JOIN phongban p ON n.phong_ban_id = p.id " +
               "WHERE n.ho_ten LIKE '%" + txtSearch.Text + "%'";
 
             dt = Getdata.getData(sql);
