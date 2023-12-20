@@ -89,13 +89,11 @@ namespace quanlihosonhansu.Authentication
                         }
                         else
                         {
-                            MessageBox.Show("ID hien tai " + loginID);
                             OpenUserForm();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("ID hien tai " + loginID);
                         OpenUserForm();
                     }
                 }
