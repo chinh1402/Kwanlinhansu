@@ -42,6 +42,9 @@ namespace quanlihosonhansu
             if (dgvDA.RowCount <= 0) return;
             if (e.RowIndex >= 0)
             {
+                txtTenDA.Enabled = true;
+                txtMoTa.Enabled = true;
+                txtTimKiem.Enabled = true;
                 DataGridViewRow row = dgvDA.Rows[e.RowIndex];
                 txtMaDA.Text = row.Cells[0].Value.ToString();
                 txtTenDA.Text = row.Cells[1].Value.ToString();
@@ -51,6 +54,10 @@ namespace quanlihosonhansu
         }
         private void btnNhap_Click(object sender, EventArgs e)
         {
+            txtKhachHangID.Enabled = true;
+            txtTenDA.Enabled = true;
+            txtMoTa.Enabled = true;
+            txtTimKiem.Enabled = true;
             txtMaDA.Text = "";
             txtTenDA.Text = "";
             txtMoTa.Text = "";
@@ -109,20 +116,22 @@ namespace quanlihosonhansu
                     txtKhachHangID.Focus();
                 }
             }
+            txtKhachHangID.Enabled = false;
+            txtTenDA.Enabled = false;
+            txtMoTa.Enabled = false;
+            txtTimKiem.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (txtTenDA.Text != "" && txtMoTa.Text != "" && txtKhachHangID.Text != "")
+            if (txtTenDA.Text != "" && txtMoTa.Text != "")
             {
-
-                string sql = "Update dbo.duan Set ten = @1, mo_ta = @2, khach_hang_id = @3 Where id = @4";
+                string sql = "Update dbo.duan Set ten = @1, mo_ta = @2 Where id = @3";
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.Add("@1", SqlDbType.VarChar).Value = txtTenDA.Text;
                 cmd.Parameters.Add("@2", SqlDbType.VarChar).Value = txtMoTa.Text;
-                cmd.Parameters.Add("@3", SqlDbType.Int).Value = Convert.ToInt32(txtKhachHangID.Text);
-                cmd.Parameters.Add("@4", SqlDbType.Int).Value = Convert.ToInt32(txtMaDA.Text);
+                cmd.Parameters.Add("@3", SqlDbType.Int).Value = Convert.ToInt32(txtMaDA.Text);
                 int result = cmd.ExecuteNonQuery();
                 dgvDA.DataSource = loadData("Select dbo.duan.id as MaDA, dbo.duan.ten as TenDA, dbo.duan.mo_ta as MoTa, dbo.duan.khach_hang_id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT from dbo.duan INNER JOIN dbo.khachhang ON dbo.duan.khach_hang_id = dbo.khachhang.id");
 
@@ -143,7 +152,7 @@ namespace quanlihosonhansu
             }
             else
             {
-                if (txtTenDA.Text == "" && txtMoTa.Text == "" && txtKhachHangID.Text == "")
+                if (txtTenDA.Text == "" && txtMoTa.Text == "")
                 {
                     MessageBox.Show("Bạn cần điền đầy đủ tất cả thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtTenDA.Focus();
@@ -158,12 +167,10 @@ namespace quanlihosonhansu
                     MessageBox.Show("Bạn không được để trống trường mô tả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtMoTa.Focus();
                 }
-                else
-                {
-                    MessageBox.Show("Bạn không được để trống trường mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtKhachHangID.Focus();
-                }
             }
+            txtTenDA.Enabled = false;
+            txtMoTa.Enabled = false;
+            txtTimKiem.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
