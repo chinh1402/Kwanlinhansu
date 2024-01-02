@@ -65,9 +65,9 @@ namespace quanlihosonhansu.Admin__hosonhansu
             comboStatus.Enabled = false;
             assignComboBoxes();
 
-
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dateTimeJoin.Enabled = false;
+            comboStaff.Enabled = false;
         }
 
         private void btnTroLai_Click(object sender, EventArgs e)
@@ -209,8 +209,10 @@ namespace quanlihosonhansu.Admin__hosonhansu
                 txtSalary.Text = dataGridView1.Rows[i].Cells[8].Value.ToString();
                 txtMulti.Text = dataGridView1.Rows[i].Cells[9].Value.ToString();
 
-                dateTimeBirth.Value = Convert.ToDateTime(dataGridView1.Rows[i].Cells[2].Value, culture);
-                dateTimeJoin.Value = Convert.ToDateTime(dataGridView1.Rows[i].Cells[7].Value, culture);
+                if (dataGridView1.Rows[i].Cells[2].Value != DBNull.Value)
+                    dateTimeBirth.Value = Convert.ToDateTime(dataGridView1.Rows[i].Cells[2].Value, culture);
+                if (dataGridView1.Rows[i].Cells[7].Value != DBNull.Value)
+                    dateTimeJoin.Value = Convert.ToDateTime(dataGridView1.Rows[i].Cells[7].Value, culture);
 
                 // handling comboBoxes
                 sql = "select phong_ban_id from nhanvien where Id = " + dataGridView1.Rows[i].Cells[0].Value.ToString();

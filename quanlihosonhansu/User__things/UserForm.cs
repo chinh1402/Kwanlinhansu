@@ -154,7 +154,7 @@ namespace quanlihosonhansu.User__things
                         hoTenTextBox.Text = dataReader["ho_ten"].ToString();
                         ngaySinhTextBox.Text = dataReader["ngay_sinh"].ToString();
                         emailTextBox.Text = dataReader["email"].ToString();
-                        soDienThoaiTextBox.Text = dataReader["password"].ToString();
+                        soDienThoaiTextBox.Text = dataReader["sdt"].ToString();
                         diaChiTextBox.Text = dataReader["dia_chi"].ToString();
                         chucVuTextBox.Text = dataReader["ten_chuc_vu"].ToString();
                         phongBanTextBox.Text = dataReader["ten_phong_ban"].ToString();
