@@ -36,9 +36,6 @@
             this.doiMatKhauStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stripMenu = new System.Windows.Forms.MenuStrip();
-            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iDNgườiĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -181,38 +178,13 @@
             // 
             this.stripMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.stripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinCáNhânToolStripMenuItem,
-            this.debugToolStripMenuItem});
+            this.thôngTinCáNhânToolStripMenuItem});
             this.stripMenu.Location = new System.Drawing.Point(15, 0);
             this.stripMenu.Name = "stripMenu";
             this.stripMenu.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.stripMenu.Size = new System.Drawing.Size(1016, 24);
             this.stripMenu.TabIndex = 3;
             this.stripMenu.Text = "menuStrip1";
-            // 
-            // debugToolStripMenuItem
-            // 
-            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem,
-            this.iDNgườiĐăngNhậpToolStripMenuItem});
-            this.debugToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.debugToolStripMenuItem.Text = "Debug";
-            // 
-            // lấyThôngTinNgườiĐầuTiênToolStripMenuItem
-            // 
-            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Name = "lấyThôngTinNgườiĐầuTiênToolStripMenuItem";
-            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Text = "Lấy thông tin người đầu tiên";
-            this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem.Click += new System.EventHandler(this.lấyThôngTinNgườiĐầuTiênToolStripMenuItem_Click);
-            // 
-            // iDNgườiĐăngNhậpToolStripMenuItem
-            // 
-            this.iDNgườiĐăngNhậpToolStripMenuItem.Name = "iDNgườiĐăngNhậpToolStripMenuItem";
-            this.iDNgườiĐăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.iDNgườiĐăngNhậpToolStripMenuItem.Text = "ID người đăng nhập";
-            this.iDNgườiĐăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.iDNgườiĐăngNhậpToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -772,8 +744,6 @@
         private ToolStripMenuItem doiMatKhauStripMenuItem;
         private MenuStrip stripMenu;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private ToolStripMenuItem debugToolStripMenuItem;
-        private ToolStripMenuItem lấyThôngTinNgườiĐầuTiênToolStripMenuItem;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private TableLayoutPanel luongTable;
@@ -813,7 +783,6 @@
         private TableLayoutPanel tongLuongThucNhanTable;
         private Label tongLuongLabel;
         private Label tongLuongHienThiLabel;
-        private ToolStripMenuItem iDNgườiĐăngNhậpToolStripMenuItem;
         private ToolStripMenuItem đăngXuấtToolStripMenuItem;
     }
 

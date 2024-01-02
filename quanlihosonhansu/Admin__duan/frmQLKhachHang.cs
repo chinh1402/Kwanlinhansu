@@ -31,7 +31,7 @@ namespace quanlihosonhansu
         private void frmQLKhachHang_Load(object sender, EventArgs e)
         {
             conn.Open();
-            dgvKH.DataSource = loadData("Select dbo.khachhang.id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT From dbo.khachhang");
+            dgvKH.DataSource = loadData("Select dbo.khachhang.id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT, dbo.duan.id as MaDA From dbo.khachhang, dbo.duan Where dbo.khachhang.id = dbo.duan.id");
             conn.Close();
         }
 
@@ -40,6 +40,10 @@ namespace quanlihosonhansu
             if (dgvKH.RowCount <= 0) return;
             if (e.RowIndex >= 0)
             {
+                txtTenKH.Enabled = true;
+                txtEmail.Enabled = true;
+                txtSDT.Enabled = true;
+                txtTimKiem.Enabled = true;
                 DataGridViewRow row = dgvKH.Rows[e.RowIndex];
                 txtMaKH.Text = row.Cells[0].Value.ToString();
                 txtTenKH.Text = row.Cells[1].Value.ToString();
@@ -50,6 +54,10 @@ namespace quanlihosonhansu
 
         private void btnNhap_Click(object sender, EventArgs e)
         {
+            txtTenKH.Enabled = true;
+            txtEmail.Enabled = true;
+            txtSDT.Enabled = true;
+            txtTimKiem.Enabled = true;
             txtMaKH.Text = "";
             txtTenKH.Text = "";
             txtEmail.Text = "";
@@ -87,7 +95,7 @@ namespace quanlihosonhansu
             }
             else
             {
-                if(txtTenKH.Text == "" && txtEmail.Text == "" && txtSDT.Text == "")
+                if (txtTenKH.Text == "" && txtEmail.Text == "" && txtSDT.Text == "")
                 {
                     MessageBox.Show("Bạn cần điền đầy đủ tất cả thông tin trước khi thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -107,6 +115,10 @@ namespace quanlihosonhansu
                     txtSDT.Focus();
                 }
             }
+            txtTenKH.Enabled = false;
+            txtEmail.Enabled = false;
+            txtSDT.Enabled = false;
+            txtTimKiem.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -161,6 +173,10 @@ namespace quanlihosonhansu
                     txtSDT.Focus();
                 }
             }
+            txtTenKH.Enabled = false;
+            txtEmail.Enabled = false;
+            txtSDT.Enabled = false;
+            txtTimKiem.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -190,6 +206,10 @@ namespace quanlihosonhansu
                     }
                 }
             }
+            txtTenKH.Enabled = false;
+            txtEmail.Enabled = false;
+            txtSDT.Enabled = false;
+            txtTimKiem.Enabled = false;
             conn.Close();
         }
         private void btnTroLai_Click(object sender, EventArgs e)
