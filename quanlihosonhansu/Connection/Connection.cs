@@ -11,7 +11,7 @@ namespace quanlihosonhansu.Connection
     {
         // :DDDDDDDDDDDDDD
         private static string 
-        stringConnection = @"Data Source=pc;Initial Catalog=kwanlinhansu;Integrated Security=True";
+        stringConnection = @"Data Source=MSI;Initial Catalog=QLNhanSu;Integrated Security=True";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(stringConnection); 

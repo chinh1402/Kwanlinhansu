@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,10 +29,25 @@ namespace quanlihosonhansu
             return dt;
         }
 
+
+
+        private bool IsValidEmail(string email)
+        {
+            // yoink trên mạng, đừng làm gì cả
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
+
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            string pattern = @"^[0-9]{7,11}$";
+            return Regex.IsMatch(phoneNumber, pattern);
+        }
+
         private void frmQLKhachHang_Load(object sender, EventArgs e)
         {
             conn.Open();
-            dgvKH.DataSource = loadData("Select dbo.khachhang.id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT, dbo.duan.id as MaDA From dbo.khachhang, dbo.duan Where dbo.khachhang.id = dbo.duan.id");
+            dgvKH.DataSource = loadData("Select dbo.khachhang.id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT From dbo.khachhang, dbo.duan");
             conn.Close();
         }
 
@@ -69,29 +85,44 @@ namespace quanlihosonhansu
         {
             if (txtTenKH.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
             {
-                String sql = "Insert Into dbo.khachhang(ten, email, sdt) Values(@1, @2, @3)";
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.Add("@1", SqlDbType.VarChar).Value = txtTenKH.Text;
-                cmd.Parameters.Add("@2", SqlDbType.VarChar).Value = txtEmail.Text;
-                cmd.Parameters.Add("@3", SqlDbType.VarChar).Value = txtSDT.Text;
-                int result = cmd.ExecuteNonQuery();
-                dgvKH.DataSource = loadData("Select dbo.khachhang.id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT From dbo.khachhang");
-
-                if (result > 0)
+                if(IsValidEmail(txtEmail.Text) == false)
                 {
-                    MessageBox.Show("Bạn đã thêm khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtMaKH.Text = "";
-                    txtTenKH.Text = "";
-                    txtEmail.Text = "";
-                    txtSDT.Text = "";
-                }
-                else
+                    MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEmail.Focus();
+                } else if (IsValidPhoneNumber(txtSDT.Text) == false)
                 {
-                    MessageBox.Show("Bạn đã thêm khách hàng không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtSDT.Focus();
+                } else
+                {
+                    String sql = "Insert Into dbo.khachhang(ten, email, sdt) Values(@1, @2, @3)";
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.Add("@1", SqlDbType.VarChar).Value = txtTenKH.Text;
+                    cmd.Parameters.Add("@2", SqlDbType.VarChar).Value = txtEmail.Text;
+                    cmd.Parameters.Add("@3", SqlDbType.VarChar).Value = txtSDT.Text;
+                    int result = cmd.ExecuteNonQuery();
+                    dgvKH.DataSource = loadData("Select dbo.khachhang.id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT From dbo.khachhang");
 
-                conn.Close();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Bạn đã thêm khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtMaKH.Text = "";
+                        txtTenKH.Text = "";
+                        txtEmail.Text = "";
+                        txtSDT.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn đã thêm khách hàng không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    txtTenKH.Enabled = false;
+                    txtEmail.Enabled = false;
+                    txtSDT.Enabled = false;
+                    txtTimKiem.Enabled = false;
+                    conn.Close();
+                }
             }
             else
             {
@@ -115,40 +146,53 @@ namespace quanlihosonhansu
                     txtSDT.Focus();
                 }
             }
-            txtTenKH.Enabled = false;
-            txtEmail.Enabled = false;
-            txtSDT.Enabled = false;
-            txtTimKiem.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (txtTenKH.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
             {
-                String sql = "Update dbo.khachhang Set ten = @1, email = @2, sdt = @3 Where id = @4";
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.Add("@1", SqlDbType.VarChar).Value = txtTenKH.Text;
-                cmd.Parameters.Add("@2", SqlDbType.VarChar).Value = txtEmail.Text;
-                cmd.Parameters.Add("@3", SqlDbType.VarChar).Value = txtSDT.Text;
-                cmd.Parameters.Add("@4", SqlDbType.Int).Value = Convert.ToInt32(txtMaKH.Text);
-                int result = cmd.ExecuteNonQuery();
-                dgvKH.DataSource = loadData("Select dbo.khachhang.id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT From dbo.khachhang");
-
-                if (result > 0)
+                if (IsValidEmail(txtEmail.Text) == false)
                 {
-                    MessageBox.Show("Bạn đã sửa thông tin khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtMaKH.Text = "";
-                    txtTenKH.Text = "";
-                    txtEmail.Text = "";
-                    txtSDT.Text = "";
+                    MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEmail.Focus();
                 }
-                else
+                else if (IsValidPhoneNumber(txtSDT.Text) == false)
                 {
-                    MessageBox.Show("Bạn đã sửa thông tin khách hàng không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    MessageBox.Show("Số điện thoại không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtSDT.Focus();
+                } else
+                {
 
-                conn.Close();
+                    String sql = "Update dbo.khachhang Set ten = @1, email = @2, sdt = @3 Where id = @4";
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.Add("@1", SqlDbType.VarChar).Value = txtTenKH.Text;
+                    cmd.Parameters.Add("@2", SqlDbType.VarChar).Value = txtEmail.Text;
+                    cmd.Parameters.Add("@3", SqlDbType.VarChar).Value = txtSDT.Text;
+                    cmd.Parameters.Add("@4", SqlDbType.Int).Value = Convert.ToInt32(txtMaKH.Text);
+                    int result = cmd.ExecuteNonQuery();
+                    dgvKH.DataSource = loadData("Select dbo.khachhang.id as MaKH, dbo.khachhang.ten as TenKH, dbo.khachhang.email as Email, dbo.khachhang.sdt as SDT From dbo.khachhang");
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Bạn đã sửa thông tin khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtMaKH.Text = "";
+                        txtTenKH.Text = "";
+                        txtEmail.Text = "";
+                        txtSDT.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn đã sửa thông tin khách hàng không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    txtTenKH.Enabled = false;
+                    txtEmail.Enabled = false;
+                    txtSDT.Enabled = false;
+                    txtTimKiem.Enabled = false;
+                    conn.Close();
+                }
             }
             else
             {
@@ -173,10 +217,6 @@ namespace quanlihosonhansu
                     txtSDT.Focus();
                 }
             }
-            txtTenKH.Enabled = false;
-            txtEmail.Enabled = false;
-            txtSDT.Enabled = false;
-            txtTimKiem.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -204,13 +244,14 @@ namespace quanlihosonhansu
                     {
                         MessageBox.Show("Bạn đã xóa khách hàng không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+                    txtTenKH.Enabled = false;
+                    txtEmail.Enabled = false;
+                    txtSDT.Enabled = false;
+                    txtTimKiem.Enabled = false;
+                    conn.Close();
                 }
             }
-            txtTenKH.Enabled = false;
-            txtEmail.Enabled = false;
-            txtSDT.Enabled = false;
-            txtTimKiem.Enabled = false;
-            conn.Close();
         }
         private void btnTroLai_Click(object sender, EventArgs e)
         {
