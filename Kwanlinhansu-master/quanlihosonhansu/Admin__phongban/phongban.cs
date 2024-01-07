@@ -225,7 +225,7 @@ namespace quanlihosonhansu.Admin__phongban
             }
             string sql = "";
             if (ktthem == true)
-
+                // Trần Ngọc 2003
                 //sql = "SET IDENTITY_INSERT phongban ON " +
                 //  "Insert into phongban(id, ten, dia_chi) Values(@1,@2,@3)" +
                 //"SET IDENTITY_INSERT phongban OFF ";
