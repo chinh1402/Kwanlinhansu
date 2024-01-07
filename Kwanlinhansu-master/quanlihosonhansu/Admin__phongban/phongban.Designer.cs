@@ -44,13 +44,12 @@
             this.btnTim = new System.Windows.Forms.Button();
             this.btnKhongGhi = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.dgDanhSach = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbSoDong = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_XoaTrang = new System.Windows.Forms.Button();
             this.rdbID = new System.Windows.Forms.RadioButton();
             this.rdbTen = new System.Windows.Forms.RadioButton();
             this.rdbDiaChi = new System.Windows.Forms.RadioButton();
@@ -102,6 +101,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(280, 34);
             this.txtTen.TabIndex = 4;
+            this.txtTen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTen_KeyPress);
             // 
             // lbDiaChi
             // 
@@ -185,7 +185,7 @@
             // btnTim
             // 
             this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTim.Location = new System.Drawing.Point(488, 240);
+            this.btnTim.Location = new System.Drawing.Point(624, 240);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(112, 32);
             this.btnTim.TabIndex = 19;
@@ -215,17 +215,6 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnXuat
-            // 
-            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnXuat.Location = new System.Drawing.Point(640, 240);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(112, 32);
-            this.btnXuat.TabIndex = 20;
-            this.btnXuat.Text = "Xuất";
-            this.btnXuat.UseVisualStyleBackColor = true;
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
-            // 
             // dgDanhSach
             // 
             this.dgDanhSach.AllowUserToAddRows = false;
@@ -235,12 +224,12 @@
             this.ID,
             this.Ten,
             this.DiaChi});
-            this.dgDanhSach.Location = new System.Drawing.Point(16, 368);
+            this.dgDanhSach.Location = new System.Drawing.Point(16, 328);
             this.dgDanhSach.Name = "dgDanhSach";
             this.dgDanhSach.ReadOnly = true;
             this.dgDanhSach.RowHeadersWidth = 51;
             this.dgDanhSach.RowTemplate.Height = 29;
-            this.dgDanhSach.Size = new System.Drawing.Size(888, 208);
+            this.dgDanhSach.Size = new System.Drawing.Size(888, 248);
             this.dgDanhSach.TabIndex = 22;
             this.dgDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDanhSach_CellContentClick);
             this.dgDanhSach.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgDanhSach_CellMouseClick);
@@ -275,29 +264,29 @@
             // lbSoDong
             // 
             this.lbSoDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbSoDong.Location = new System.Drawing.Point(568, 336);
+            this.lbSoDong.Location = new System.Drawing.Point(568, 296);
             this.lbSoDong.Name = "lbSoDong";
             this.lbSoDong.Size = new System.Drawing.Size(336, 32);
             this.lbSoDong.TabIndex = 23;
             this.lbSoDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button1
+            // btn_XoaTrang
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(320, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 32);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Xóa trắng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_XoaTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_XoaTrang.Location = new System.Drawing.Point(320, 240);
+            this.btn_XoaTrang.Name = "btn_XoaTrang";
+            this.btn_XoaTrang.Size = new System.Drawing.Size(112, 32);
+            this.btn_XoaTrang.TabIndex = 24;
+            this.btn_XoaTrang.Text = "Xóa trắng";
+            this.btn_XoaTrang.UseVisualStyleBackColor = true;
+            this.btn_XoaTrang.Click += new System.EventHandler(this.button1_Click);
             // 
             // rdbID
             // 
             this.rdbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbID.Location = new System.Drawing.Point(488, 192);
+            this.rdbID.Location = new System.Drawing.Point(624, 192);
             this.rdbID.Name = "rdbID";
-            this.rdbID.Size = new System.Drawing.Size(112, 30);
+            this.rdbID.Size = new System.Drawing.Size(88, 30);
             this.rdbID.TabIndex = 25;
             this.rdbID.TabStop = true;
             this.rdbID.Text = "ID";
@@ -307,9 +296,9 @@
             // rdbTen
             // 
             this.rdbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbTen.Location = new System.Drawing.Point(640, 192);
+            this.rdbTen.Location = new System.Drawing.Point(720, 192);
             this.rdbTen.Name = "rdbTen";
-            this.rdbTen.Size = new System.Drawing.Size(112, 30);
+            this.rdbTen.Size = new System.Drawing.Size(88, 30);
             this.rdbTen.TabIndex = 26;
             this.rdbTen.TabStop = true;
             this.rdbTen.Text = "Tên";
@@ -319,9 +308,9 @@
             // rdbDiaChi
             // 
             this.rdbDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdbDiaChi.Location = new System.Drawing.Point(792, 192);
+            this.rdbDiaChi.Location = new System.Drawing.Point(816, 192);
             this.rdbDiaChi.Name = "rdbDiaChi";
-            this.rdbDiaChi.Size = new System.Drawing.Size(112, 30);
+            this.rdbDiaChi.Size = new System.Drawing.Size(88, 30);
             this.rdbDiaChi.TabIndex = 27;
             this.rdbDiaChi.TabStop = true;
             this.rdbDiaChi.Text = "Địa chỉ";
@@ -336,11 +325,10 @@
             this.Controls.Add(this.rdbDiaChi);
             this.Controls.Add(this.rdbTen);
             this.Controls.Add(this.rdbID);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_XoaTrang);
             this.Controls.Add(this.lbSoDong);
             this.Controls.Add(this.dgDanhSach);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.btnKhongGhi);
             this.Controls.Add(this.btnGhi);
@@ -359,8 +347,9 @@
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "phongban";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " Quản lí phòng ban";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.phongban_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgDanhSach)).EndInit();
             this.ResumeLayout(false);
@@ -386,13 +375,12 @@
         private Button btnTim;
         private Button btnKhongGhi;
         private Button btnThoat;
-        private Button btnXuat;
         private DataGridView dgDanhSach;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Ten;
         private DataGridViewTextBoxColumn DiaChi;
         private Label lbSoDong;
-        private Button button1;
+        private Button btn_XoaTrang;
         private RadioButton rdbID;
         private RadioButton rdbTen;
         private RadioButton rdbDiaChi;

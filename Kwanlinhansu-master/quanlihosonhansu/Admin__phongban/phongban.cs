@@ -27,6 +27,7 @@ namespace quanlihosonhansu.Admin__phongban
             LayNguon();
             lbSoDong.Text = "Danh sách có " + dgDanhSach.RowCount + " dòng.";
             KhoaMo(true);
+            btnThem.Focus();
             
         }
         void LayNguon()
@@ -50,7 +51,7 @@ namespace quanlihosonhansu.Admin__phongban
             btnGhi.Enabled = !b;
             btnKhongGhi.Enabled = !b;
             btnTim.Enabled = b;
-            btnXuat.Enabled = b;
+            //btnXuat.Enabled = b;
             btnThoat.Enabled = b;
         }
         void XoaTrang()
@@ -73,6 +74,7 @@ namespace quanlihosonhansu.Admin__phongban
             btnXoa.Enabled = false;
             btnSua.Enabled = false;
            
+           
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -82,6 +84,7 @@ namespace quanlihosonhansu.Admin__phongban
             macu = txtID.Text;
             txtID.ReadOnly = true;
             txtID.Focus();
+            btn_XoaTrang.Enabled = false;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -114,6 +117,7 @@ namespace quanlihosonhansu.Admin__phongban
         {
             XoaTrang();
             KhoaMo(true);
+            btn_XoaTrang.Enabled = true;
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -208,14 +212,30 @@ namespace quanlihosonhansu.Admin__phongban
             btnXoa.Enabled = false;
             @public.GanNguonDataGridView(dgDanhSach, "select * from phongban");
         }
-
+        
+        bool ktra_nhap = true;
+        private void txtTen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            {
+                ktra_nhap = false;
+            }
+        }
+        
         private void btnGhi_Click(object sender, EventArgs e)
         {
+            btn_XoaTrang.Enabled = true;
             //if (txtID.Text == "")
             //{
-              //  cbmabp.Focus();
-              //  return;
+            //  cbmabp.Focus();
+            //  return;
             //}
+            //if(ktra_nhap == false)
+            //{
+            //    MessageBox.Show("Tên phòng ban không được có ký tự đặc biệt.", "Thông Báo",
+            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
             if (@public.ktTrungMa("phongban", "id", ktthem, txtID.Text, macu))
             {
                 MessageBox.Show("Bạn nhập  mã phòng đã tồn tại.", "Thông Báo",
