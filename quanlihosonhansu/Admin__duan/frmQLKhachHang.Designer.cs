@@ -45,12 +45,13 @@
             label1 = new Label();
             btnTroLai = new Button();
             label6 = new Label();
+            btnKhong = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvKH).BeginInit();
             SuspendLayout();
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(337, 203);
+            btnNhap.Location = new Point(277, 203);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(98, 45);
             btnNhap.TabIndex = 33;
@@ -73,9 +74,10 @@
             // 
             // btnXoa
             // 
+            btnXoa.Enabled = false;
             btnXoa.Image = Properties.Resources.deletePic;
             btnXoa.ImageAlign = ContentAlignment.MiddleRight;
-            btnXoa.Location = new Point(654, 203);
+            btnXoa.Location = new Point(698, 203);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(98, 45);
             btnXoa.TabIndex = 31;
@@ -86,9 +88,10 @@
             // 
             // btnSua
             // 
+            btnSua.Enabled = false;
             btnSua.Image = Properties.Resources.updatePic;
             btnSua.ImageAlign = ContentAlignment.MiddleRight;
-            btnSua.Location = new Point(545, 201);
+            btnSua.Location = new Point(594, 203);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(98, 45);
             btnSua.TabIndex = 30;
@@ -99,9 +102,10 @@
             // 
             // btnThem
             // 
+            btnThem.Enabled = false;
             btnThem.Image = Properties.Resources.addPic;
             btnThem.ImageAlign = ContentAlignment.MiddleRight;
-            btnThem.Location = new Point(441, 201);
+            btnThem.Location = new Point(490, 202);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(98, 45);
             btnThem.TabIndex = 29;
@@ -112,8 +116,7 @@
             // 
             // txtTimKiem
             // 
-            txtTimKiem.Enabled = false;
-            txtTimKiem.Location = new Point(152, 211);
+            txtTimKiem.Location = new Point(97, 212);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(170, 27);
             txtTimKiem.TabIndex = 28;
@@ -213,17 +216,29 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(73, 213);
+            label6.Location = new Point(18, 214);
             label6.Name = "label6";
             label6.Size = new Size(70, 20);
             label6.TabIndex = 34;
             label6.Text = "Tìm kiếm";
+            // 
+            // btnKhong
+            // 
+            btnKhong.Enabled = false;
+            btnKhong.Location = new Point(381, 203);
+            btnKhong.Name = "btnKhong";
+            btnKhong.Size = new Size(98, 45);
+            btnKhong.TabIndex = 35;
+            btnKhong.Text = "Không";
+            btnKhong.UseVisualStyleBackColor = true;
+            btnKhong.Click += btnKhong_Click;
             // 
             // frmQLKhachHang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(818, 461);
+            Controls.Add(btnKhong);
             Controls.Add(label6);
             Controls.Add(btnNhap);
             Controls.Add(dgvKH);
@@ -269,5 +284,6 @@
         private Label label1;
         private Button btnTroLai;
         private Label label6;
+        private Button btnKhong;
     }
 }

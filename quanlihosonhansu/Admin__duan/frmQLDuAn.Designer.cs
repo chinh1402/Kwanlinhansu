@@ -45,6 +45,7 @@
             dgvDA = new DataGridView();
             btnNhap = new Button();
             label6 = new Label();
+            btnKhong = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDA).BeginInit();
             SuspendLayout();
             // 
@@ -141,8 +142,7 @@
             // 
             // txtTimKiem
             // 
-            txtTimKiem.Enabled = false;
-            txtTimKiem.Location = new Point(167, 200);
+            txtTimKiem.Location = new Point(95, 200);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(170, 27);
             txtTimKiem.TabIndex = 11;
@@ -150,9 +150,10 @@
             // 
             // btnThem
             // 
+            btnThem.Enabled = false;
             btnThem.Image = Properties.Resources.addPic;
             btnThem.ImageAlign = ContentAlignment.MiddleRight;
-            btnThem.Location = new Point(456, 191);
+            btnThem.Location = new Point(479, 192);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(98, 45);
             btnThem.TabIndex = 12;
@@ -163,9 +164,10 @@
             // 
             // btnSua
             // 
+            btnSua.Enabled = false;
             btnSua.Image = Properties.Resources.updatePic;
             btnSua.ImageAlign = ContentAlignment.MiddleRight;
-            btnSua.Location = new Point(560, 192);
+            btnSua.Location = new Point(583, 192);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(98, 45);
             btnSua.TabIndex = 13;
@@ -176,9 +178,10 @@
             // 
             // btnXoa
             // 
+            btnXoa.Enabled = false;
             btnXoa.Image = Properties.Resources.deletePic;
             btnXoa.ImageAlign = ContentAlignment.MiddleRight;
-            btnXoa.Location = new Point(664, 192);
+            btnXoa.Location = new Point(687, 192);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(98, 45);
             btnXoa.TabIndex = 14;
@@ -202,7 +205,7 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(352, 191);
+            btnNhap.Location = new Point(271, 192);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(98, 45);
             btnNhap.TabIndex = 16;
@@ -213,17 +216,29 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(88, 204);
+            label6.Location = new Point(16, 204);
             label6.Name = "label6";
             label6.Size = new Size(70, 20);
             label6.TabIndex = 17;
             label6.Text = "Tìm kiếm";
+            // 
+            // btnKhong
+            // 
+            btnKhong.Enabled = false;
+            btnKhong.Location = new Point(375, 192);
+            btnKhong.Name = "btnKhong";
+            btnKhong.Size = new Size(98, 45);
+            btnKhong.TabIndex = 18;
+            btnKhong.Text = "Không";
+            btnKhong.UseVisualStyleBackColor = true;
+            btnKhong.Click += btnKhong_Click;
             // 
             // frmQLDuAn
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(826, 461);
+            Controls.Add(btnKhong);
             Controls.Add(label6);
             Controls.Add(btnNhap);
             Controls.Add(dgvDA);
@@ -269,5 +284,6 @@
         private DataGridView dgvDA;
         private Button btnNhap;
         private Label label6;
+        private Button btnKhong;
     }
 }

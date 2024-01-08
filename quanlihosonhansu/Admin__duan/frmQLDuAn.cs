@@ -43,6 +43,11 @@ namespace quanlihosonhansu
             if (dgvDA.RowCount <= 0) return;
             if (e.RowIndex >= 0)
             {
+                btnThem.Enabled = true;
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+                btnKhong.Enabled = true;
+                btnNhap.Enabled = false;
                 txtTenDA.Enabled = true;
                 txtMoTa.Enabled = true;
                 txtKhachHangID.Enabled = true;
@@ -64,12 +69,28 @@ namespace quanlihosonhansu
             return count > 0;
         }
 
+        private void resetKhong()
+        {
+            btnThem.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnKhong.Enabled = false;
+            btnNhap.Enabled = true;
+            txtTenDA.Enabled = false;
+            txtMoTa.Enabled = false;
+            txtKhachHangID.Enabled = false;
+        } 
+
         private void btnNhap_Click(object sender, EventArgs e)
         {
             txtKhachHangID.Enabled = true;
             txtTenDA.Enabled = true;
             txtMoTa.Enabled = true;
-            txtTimKiem.Enabled = true;
+            btnThem.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnKhong.Enabled = true;
+            btnNhap.Enabled = false;
             txtMaDA.Text = "";
             txtTenDA.Text = "";
             txtMoTa.Text = "";
@@ -82,7 +103,7 @@ namespace quanlihosonhansu
             conn.Open();
             if (txtTenDA.Text != "" && txtMoTa.Text != "" && txtKhachHangID.Text != "")
             {
-                if(isCustomerExist(txtKhachHangID.Text))
+                if (isCustomerExist(txtKhachHangID.Text))
                 {
                     String sql = "Insert Into dbo.duan(ten, mo_ta, khach_hang_id) Values(@1, @2, @3)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
@@ -104,12 +125,9 @@ namespace quanlihosonhansu
                     {
                         MessageBox.Show("Bạn đã thêm dự án không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    txtKhachHangID.Enabled = false;
-                    txtTenDA.Enabled = false;
-                    txtMoTa.Enabled = false;
-                    txtTimKiem.Enabled = false;
-                } else
+                    resetKhong();
+                }
+                else
                 {
                     MessageBox.Show("Mã khách hàng không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtKhachHangID.Focus();
@@ -166,11 +184,7 @@ namespace quanlihosonhansu
                 {
                     MessageBox.Show("Bạn đã sửa thông tin dự án không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                txtTenDA.Enabled = false;
-                txtMoTa.Enabled = false;
-                txtKhachHangID.Enabled = false;
-                txtTimKiem.Enabled = false;
+                resetKhong();
                 conn.Close();
             }
             else
@@ -220,10 +234,7 @@ namespace quanlihosonhansu
                     }
                 }
             }
-            txtTenDA.Enabled = false;
-            txtMoTa.Enabled = false;
-            txtKhachHangID.Enabled = false;
-            txtTimKiem.Enabled = false;
+            resetKhong();
             conn.Close();
         }
 
@@ -250,8 +261,17 @@ namespace quanlihosonhansu
 
         private void frmQLDuAn_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            this.Close();
+            /*this.Close();*/
 
+        }
+
+        private void btnKhong_Click(object sender, EventArgs e)
+        {
+            resetKhong();
+            txtMaDA.Text = "";
+            txtTenDA.Text = "";
+            txtMoTa.Text = "";
+            txtKhachHangID.Text = "";
         }
     }
 }
