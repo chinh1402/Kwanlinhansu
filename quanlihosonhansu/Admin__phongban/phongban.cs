@@ -27,13 +27,14 @@ namespace quanlihosonhansu.Admin__phongban
             LayNguon();
             lbSoDong.Text = "Danh sách có " + dgDanhSach.RowCount + " dòng.";
             KhoaMo(true);
-            
+            btnThem.Focus();
+
         }
         void LayNguon()
         {
             string sql = "Select id, ten, dia_chi from phongban";
             //if (dk != "")
-              //  sql = sql + " where MaBoPhan like '%" + dk + "%' or MaPhong like '%" + dk + "%'";
+            //  sql = sql + " where MaBoPhan like '%" + dk + "%' or MaPhong like '%" + dk + "%'";
             @public.GanNguonDataGridView(dgDanhSach, sql);
         }
         void KhoaMo(bool b)
@@ -50,17 +51,17 @@ namespace quanlihosonhansu.Admin__phongban
             btnGhi.Enabled = !b;
             btnKhongGhi.Enabled = !b;
             btnTim.Enabled = b;
-            btnXuat.Enabled = b;
+            //btnXuat.Enabled = b;
             btnThoat.Enabled = b;
         }
         void XoaTrang()
         {
-   
+
             txtID.Text = "";
             txtTen.Text = "";
             txtDiaChi.Text = "";
             txtTimKiem.Text = "";
-            
+
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -72,7 +73,8 @@ namespace quanlihosonhansu.Admin__phongban
             txtTimKiem.ReadOnly = true;
             btnXoa.Enabled = false;
             btnSua.Enabled = false;
-           
+
+
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -82,6 +84,7 @@ namespace quanlihosonhansu.Admin__phongban
             macu = txtID.Text;
             txtID.ReadOnly = true;
             txtID.Focus();
+            btn_XoaTrang.Enabled = false;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -100,10 +103,10 @@ namespace quanlihosonhansu.Admin__phongban
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgDanhSach.Rows[e.RowIndex];
-              
+
                 txtID.Text = row.Cells[0].Value.ToString();
                 txtTen.Text = row.Cells[1].Value.ToString();
-          
+
                 txtDiaChi.Text = row.Cells[2].Value.ToString();
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
@@ -114,6 +117,7 @@ namespace quanlihosonhansu.Admin__phongban
         {
             XoaTrang();
             KhoaMo(true);
+            btn_XoaTrang.Enabled = true;
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -124,7 +128,8 @@ namespace quanlihosonhansu.Admin__phongban
                 //{
                 //    MessageBox.Show("Bạn chưa nhập tên phòng ban", "Nhập tên phòng ban", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //}
-                if (txtTimKiem.Text == ""){
+                if (txtTimKiem.Text == "")
+                {
                     @public.GanNguonDataGridView(dgDanhSach, "select * from phongban");
                     lbSoDong.Text = "Danh sách có " + dgDanhSach.RowCount + " dòng.";
 
@@ -168,7 +173,7 @@ namespace quanlihosonhansu.Admin__phongban
                 }
             }
         }
-           
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (txtID.Text == "") return;
@@ -178,7 +183,7 @@ namespace quanlihosonhansu.Admin__phongban
             {
                 @public.XoaDongDL("phongban", "id", macu);
                 MessageBox.Show("Bạn đã xóa thành công", "Thông Báo",
-                MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LayNguon();
             }
         }
@@ -209,13 +214,29 @@ namespace quanlihosonhansu.Admin__phongban
             @public.GanNguonDataGridView(dgDanhSach, "select * from phongban");
         }
 
+        bool ktra_nhap = true;
+        private void txtTen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            {
+                ktra_nhap = false;
+            }
+        }
+
         private void btnGhi_Click(object sender, EventArgs e)
         {
+            btn_XoaTrang.Enabled = true;
             //if (txtID.Text == "")
             //{
-              //  cbmabp.Focus();
-              //  return;
+            //  cbmabp.Focus();
+            //  return;
             //}
+            //if(ktra_nhap == false)
+            //{
+            //    MessageBox.Show("Tên phòng ban không được có ký tự đặc biệt.", "Thông Báo",
+            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
             if (@public.ktTrungMa("phongban", "id", ktthem, txtID.Text, macu))
             {
                 MessageBox.Show("Bạn nhập  mã phòng đã tồn tại.", "Thông Báo",
@@ -230,13 +251,13 @@ namespace quanlihosonhansu.Admin__phongban
                 //  "Insert into phongban(id, ten, dia_chi) Values(@1,@2,@3)" +
                 //"SET IDENTITY_INSERT phongban OFF ";
                 sql = "Insert into phongban(ten, dia_chi) Values(@2,@3)";
-                
+
 
             else
                 sql = "Update phongban set ten=@2,dia_chi=@3 Where id=@1";
             SqlConnection conn = @public.KetNoi();
             SqlCommand cmd = new SqlCommand(sql, conn);
-            if(ktthem == true)
+            if (ktthem == true)
             {
                 MessageBox.Show("Bạn đã thêm thành công", "Thông Báo",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -259,12 +280,12 @@ namespace quanlihosonhansu.Admin__phongban
             KhoaMo(true);
             XoaTrang();
         }
-        
+
 
 
 
 
     }
 
-        
-    }
+
+}

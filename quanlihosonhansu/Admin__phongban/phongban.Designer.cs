@@ -44,13 +44,12 @@
             this.btnTim = new System.Windows.Forms.Button();
             this.btnKhongGhi = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.dgDanhSach = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbSoDong = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_XoaTrang = new System.Windows.Forms.Button();
             this.rdbID = new System.Windows.Forms.RadioButton();
             this.rdbTen = new System.Windows.Forms.RadioButton();
             this.rdbDiaChi = new System.Windows.Forms.RadioButton();
@@ -65,7 +64,7 @@
             this.label1.Location = new System.Drawing.Point(256, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 38);
+            this.label1.Size = new System.Drawing.Size(335, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN PHÒNG BAN";
             // 
@@ -83,7 +82,7 @@
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtID.Location = new System.Drawing.Point(152, 80);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(280, 34);
+            this.txtID.Size = new System.Drawing.Size(280, 28);
             this.txtID.TabIndex = 2;
             // 
             // lb2
@@ -100,7 +99,7 @@
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTen.Location = new System.Drawing.Point(152, 128);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(280, 34);
+            this.txtTen.Size = new System.Drawing.Size(280, 28);
             this.txtTen.TabIndex = 4;
             // 
             // lbDiaChi
@@ -117,7 +116,7 @@
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDiaChi.Location = new System.Drawing.Point(624, 80);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(280, 34);
+            this.txtDiaChi.Size = new System.Drawing.Size(280, 28);
             this.txtDiaChi.TabIndex = 6;
             // 
             // btnThem
@@ -136,7 +135,7 @@
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTimKiem.Location = new System.Drawing.Point(624, 128);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(280, 34);
+            this.txtTimKiem.Size = new System.Drawing.Size(280, 28);
             this.txtTimKiem.TabIndex = 14;
             // 
             // label5
@@ -215,17 +214,6 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnXuat
-            // 
-            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnXuat.Location = new System.Drawing.Point(640, 240);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(112, 32);
-            this.btnXuat.TabIndex = 20;
-            this.btnXuat.Text = "Xuất";
-            this.btnXuat.UseVisualStyleBackColor = true;
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
-            // 
             // dgDanhSach
             // 
             this.dgDanhSach.AllowUserToAddRows = false;
@@ -281,16 +269,16 @@
             this.lbSoDong.TabIndex = 23;
             this.lbSoDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button1
+            // btn_XoaTrang
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(320, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 32);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Xóa trắng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_XoaTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_XoaTrang.Location = new System.Drawing.Point(320, 240);
+            this.btn_XoaTrang.Name = "btn_XoaTrang";
+            this.btn_XoaTrang.Size = new System.Drawing.Size(112, 32);
+            this.btn_XoaTrang.TabIndex = 24;
+            this.btn_XoaTrang.Text = "Xóa trắng";
+            this.btn_XoaTrang.UseVisualStyleBackColor = true;
+            this.btn_XoaTrang.Click += new System.EventHandler(this.button1_Click);
             // 
             // rdbID
             // 
@@ -330,17 +318,16 @@
             // 
             // phongban
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 592);
             this.Controls.Add(this.rdbDiaChi);
             this.Controls.Add(this.rdbTen);
             this.Controls.Add(this.rdbID);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_XoaTrang);
             this.Controls.Add(this.lbSoDong);
             this.Controls.Add(this.dgDanhSach);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.btnKhongGhi);
             this.Controls.Add(this.btnGhi);
@@ -386,13 +373,12 @@
         private Button btnTim;
         private Button btnKhongGhi;
         private Button btnThoat;
-        private Button btnXuat;
         private DataGridView dgDanhSach;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Ten;
         private DataGridViewTextBoxColumn DiaChi;
         private Label lbSoDong;
-        private Button button1;
+        private Button btn_XoaTrang;
         private RadioButton rdbID;
         private RadioButton rdbTen;
         private RadioButton rdbDiaChi;
